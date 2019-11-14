@@ -1,65 +1,19 @@
-// Gatsby and React stuff
+// Gatsby, Plugins, and React stuff
 import React from "react"
 import PropTypes from "prop-types"
+import styled from '@emotion/styled'
 import { useStaticQuery, graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
+import { Global, css } from "@emotion/core"
+
 
 // Components and styles
-
+import { colors, type } from "./styles"
 import "../styles/tachyons.css"
-import { css, Global } from "@emotion/core"
-import styled from '@emotion/styled'
 import Header from "./header"
 import Footer from "./footer"
-import { ThemeProvider } from 'emotion-theming'
-
-
-
-// Site-wide constants
-
-const theme = {
-  colors: {
-    links: '#111',
-    linkUnderline: '#999',
-    linkHover: '#fff',
-    linkHoverBG: '#ed213a',
-    imageCaption: '#888',
-    codeBG: '#ddd',
-    pageTitle: '#1b1b1b',
-    content: 'rgba(0,0,0,.8)',
-  },
-  
-  fontSizes: {
-    pageTitle: '2.5em',
-    H2: '1.62em',
-    H3: '1.375em',
-    H4: '1.2em',
-    bodyText: '1.125em',
-    yellowBox: '14px',
-  },
-
-  fontWeights: {
-    pageTitle: '700',
-    H2: '700',
-    H3: '500',
-    H4: '400',
-    linkWeight: '500',
-  },
-
-  lineHeights: {
-    H2: '1.2',
-    H3: '1.4',
-    H4: '1.5',
-    bodyText: '1.5',
-    yellowBox: '1.5',
-    imageCaption: '1.2',
-  },
-};
-
 
 // Styled Components
-
-
 
 const HomeCenteredArea = styled.div`
   margin-left: auto;
@@ -88,8 +42,8 @@ const YellowBox = styled.div`
   padding: 2rem;
   border: 1px solid #ddd280;
   border-radius: 2px;
-  font-size: ${props => props.theme.fontSizes.yellowBox};
-  line-height: ${props => props.theme.lineHeights.yellowBox};
+  font-size: ${type.fontSizes.yellowBox};
+  line-height: ${type.lineHeights.yellowBox};
   color: #111;
 `;
 
@@ -97,45 +51,66 @@ const ImageCaption = styled.span`
   display: inherit;
   text-align: center;
   font-size: 15px;
-  line-height: ${props => props.theme.lineHeights.imageCaption};
-  color: ${props => props.theme.colors.imageCaption};
+  line-height: ${type.lineHeights.imageCaption};
+  color: ${colors.imageCaption};
   margin-bottom: 40px;
   `;
 
 export const PageTitle = styled.h1`
-font-size: ${props => props.theme.fontSizes.pageTitle};
-font-weight: ${props => props.theme.fontWeights.pageTitle};
+font-size: ${type.fontSizes.pageTitle};
+font-weight: ${type.fontWeights.pageTitle};
 letter-spacing: -0.015em;
-color: ${props => props.theme.colors.pageTitle};
+color: ${colors.pageTitle};
 margin-bottom: 3rem;
 `;
 
 
 // Container CSS
-export const Container = styled.div`
+
+
+const MainContainer = styled.div`
+  background-color: #f5f5f5;
   margin: 0 auto;
-  max-width: 600px;
-  padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
   display: flex;
   flex-direction: column;
+  `;
+
+export const InnerContainer = styled.div`
+  margin: 0 auto;
+  max-width: 550px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   @media all and (max-width:800px){
   .reverse-cols {
   display: flex;
   flex-flow: wrap;
-  flex-direction: column-reverse;}}
+  flex-direction: column-reverse;}
+  }
+
+  @media (min-width: 700px) {
+    p img {
+      max-width: calc(100% + 50px);
+
+    width: auto;
+    margin-left: -25px;
+    margin-right: -25px;
+    }
+  }
+
+
 
   a {
-      color: ${props => props.theme.colors.links};
-      font-weight: ${props => props.theme.fontWeights.linkWeight};
+      color: ${colors.links};
+      font-weight: ${type.fontWeights.linkWeight};
       text-decoration: none;
-      border-bottom: 2px solid ${props => props.theme.colors.linkUnderline};
+      border-bottom: 2px solid ${colors.linkUnderline};
     }
     a:hover {
-      color: ${props => props.theme.colors.linkHover};
-      background: ${props => props.theme.colors.linkHoverBG};
+      color: ${colors.linkHover};
+      background: ${colors.linkHoverBG};
       text-decoration: none;
       border-bottom: 0px;
     }
@@ -143,7 +118,7 @@ export const Container = styled.div`
     
     
     code {
-      background: ${props => props.theme.colors.codeBG};
+      background: ${colors.codeBG};
       font-size: 75% !important;
       overflow-wrap: break-word;
       word-wrap: break-word;
@@ -153,9 +128,9 @@ export const Container = styled.div`
     
     
        p {
-        font-size: ${props => props.theme.fontSizes.bodyText};
-      line-height: ${props => props.theme.lineHeights.bodyText};
-        color: ${props => props.theme.colors.content};
+        font-size: ${type.fontSizes.bodyText};
+      line-height: ${type.lineHeights.bodyText};
+        color: ${colors.content};
         margin-top: 0;
     margin-bottom: 1.5em;
         
@@ -164,9 +139,9 @@ export const Container = styled.div`
        li {
         margin-top: 0;
         margin-bottom: 1.3em;
-        font-size: ${props => props.theme.fontSizes.bodyText};
-        line-height: ${props => props.theme.lineHeights.bodyText};
-        color: ${props => props.theme.colors.content};
+        font-size: ${type.fontSizes.bodyText};
+        line-height: ${type.lineHeights.bodyText};
+        color: ${colors.content};
 
        }
 
@@ -184,16 +159,15 @@ export const Container = styled.div`
      
 p img {
   display: block;
-  height: auto;
-  margin: 1rem auto;
-  max-width: 100%;
-  border-radius: 3px;
+  border-radius: 2px;
+  border: 1px solid #dad6e480;
+
 }
 
 h4 {
-  line-height: ${props => props.theme.lineHeights.H4};
-  font-size: ${props => props.theme.fontSizes.H4};
-  font-weight: ${props => props.theme.fontWeights.H4};
+  line-height: ${type.lineHeights.H4};
+  font-size: ${type.fontSizes.H4};
+  font-weight: ${type.fontWeights.H4};
   
 }
 
@@ -207,14 +181,14 @@ h4 {
 
 
 h2 {
-  font-size: ${props => props.theme.fontSizes.H2};
-  font-weight: ${props => props.theme.fontWeights.H2};
+  font-size: ${type.fontSizes.H2};
+  font-weight: ${type.fontWeights.H2};
 }
 
 
 h3 {
-  font-size: ${props => props.theme.fontSizes.H3};
-  font-weight: ${props => props.theme.fontWeights.H3};
+  font-size: ${type.fontSizes.H3};
+  font-weight: ${type.fontWeights.H3};
 }
    
 
@@ -242,37 +216,36 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
 // Output
-  return (
-    <ThemeProvider theme={theme}>
-      
-       <Global styles={css`
-        html, body {
-            height: 100%;
-            background-color: #f5f5f5;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-              "Helvetica Neue", Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
+return (
 
-            /* The html and body elements cannot have any padding or margin. */
-        }
-      `} />
+<React.Fragment>
+  <Global styles={css`
+    html, body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* The html and body elements cannot have any padding or margin. */
+    }
+  `} />
 
-    <MDXProvider components={{ YellowBox, ImageCaption, HomeCenteredArea, HomeHeadline, SubHeadline, HomeAvatarImg }} >
-      <Header siteTitle={data.site.siteMetadata.title} />
-        <Container>
-          <main>{children}</main>
-        </Container>
-            <Footer />
-    </MDXProvider>
-    </ThemeProvider>
-  )
-}
+<MainContainer>
+  <MDXProvider components={{ YellowBox, ImageCaption, HomeCenteredArea, HomeHeadline, SubHeadline, HomeAvatarImg }} >
+    <Header siteTitle={data.site.siteMetadata.title} />
+      <InnerContainer>
+        <main>{children}</main>
+      </InnerContainer>
+          <Footer />
+  </MDXProvider>
+</MainContainer>
+</React.Fragment>
+
+)}
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+children: PropTypes.node.isRequired,
 }
 
 export default Layout
