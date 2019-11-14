@@ -3,22 +3,7 @@ import { Link } from "gatsby"
 
 import styled from '@emotion/styled'
 import Brighter from "../images/portfolio/brighter2.png"
-import SimplifiedFitness from "../images/portfolio/simplifiedFitness2.png"
-import DesignSite from "../images/portfolio/design-site2.png"
-import JCDFitness from "../images/portfolio/jcdfitness2.png"
-import BryanKrahn from "../images/portfolio/bryankrahn2.png"
-import Physiqonomics from "../images/portfolio/physiqonomics2.png"
 
-
-// Styled Components
-const ScreenshotImage= styled.img`
- border-radius: .25rem;
- box-shadow: 0 0 8px 2px rgba(0,0,0,.2);
-`;
-
-const LinkToImage= styled(Link)`
-
-`;
 
 
 // Output
@@ -37,9 +22,9 @@ const Portfolio = () => {
           </div>
       <div class="fl w-100 w-70-ns ph4">
         <div class="pv4">
-          <LinkToImage to={Brighter}>
-            <ScreenshotImage src={Brighter} />
-          </LinkToImage>
+          
+            <img src={Brighter} />
+          
         </div>
       </div>
       
@@ -61,9 +46,7 @@ const Portfolio = () => {
             </div>
           <div class="fl w-100 w-70-ns ph4">
               <div class="pv4">
-              <LinkToImage to={SimplifiedFitness}>
-                <ScreenshotImage src={SimplifiedFitness} />
-                </LinkToImage>
+              <img src={Brighter} />
               </div>
             </div>
       </div>
@@ -83,9 +66,7 @@ const Portfolio = () => {
             </div>
         <div class="fl w-100 w-70-ns ph4">
           <div class="pv4">
-          <LinkToImage to={JCDFitness}>
-            <ScreenshotImage src={JCDFitness} />
-            </LinkToImage>
+          <img src={Brighter} />
           </div>
         </div>
         
@@ -106,9 +87,7 @@ const Portfolio = () => {
             </div>
           <div class="fl w-100 w-70-ns ph4">
               <div class="pv4">
-              <LinkToImage to={DesignSite}>
-                <ScreenshotImage src={DesignSite} />
-                </LinkToImage>
+              <img src={Brighter} />
               </div>
             </div>
          
@@ -132,9 +111,7 @@ const Portfolio = () => {
           </div>
       <div class="fl w-100 w-70-ns ph4">
         <div class="pv4">
-        <LinkToImage to={BryanKrahn}>
-          <ScreenshotImage src={BryanKrahn} />
-          </LinkToImage>
+        <img src={Brighter} />
         </div>
       </div>
       
@@ -155,9 +132,7 @@ const Portfolio = () => {
             </div>
           <div class="fl w-100 w-70-ns ph4">
               <div class="pv4">
-              <LinkToImage to={Physiqonomics}>
-          <ScreenshotImage src={Physiqonomics} />
-          </LinkToImage>
+              <img src={Brighter} />
                 
               </div>
             </div>

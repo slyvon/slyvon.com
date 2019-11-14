@@ -18,11 +18,22 @@ module.exports.onCreateNode = ({ node, actions}) => {
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const pageTemplate = path.resolve('./src/templates/page.js')
+  const widepageTemplate = path.resolve('./src/templates/page-wide.js')
   const blogTemplate = path.resolve('./src/templates/blog-post.js')
   const res = await graphql(`
     query {
       pageMdx: 
       allMdx (filter: { frontmatter: { type: {eq: "page"}}}) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+      widepageMdx: 
+      allMdx (filter: { frontmatter: { type: {eq: "wide-page"}}}) {
         edges {
           node {
             fields {
@@ -49,6 +60,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
   res.data.pageMdx.edges.forEach ((edge) => {
     createPage ({
       component: pageTemplate,
+      path: `/${edge.node.fields.slug}`,
+      context: {
+        slug: edge.node.fields.slug
+      }
+    })
+  })
+
+  res.data.widepageMdx.edges.forEach ((edge) => {
+    createPage ({
+      component: widepageTemplate,
       path: `/${edge.node.fields.slug}`,
       context: {
         slug: edge.node.fields.slug
