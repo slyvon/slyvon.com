@@ -59,8 +59,6 @@ const theme = {
 // Styled Components
 
 
-
-
 const HomeCenteredArea = styled.div`
   margin-left: auto;
   margin-right: auto;
@@ -76,6 +74,11 @@ const HomeHeadline = styled.h1`
 const SubHeadline = styled.h1`
       margin-top: 0;
       line-height: 1;
+`;
+
+const HomeAvatarImg = styled.img`
+  width: 20%;
+
 `;
 
 const YellowBox = styled.div`
@@ -255,7 +258,7 @@ const Layout = ({ children }) => {
         }
       `} />
 
-    <MDXProvider components={{ YellowBox, ImageCaption, HomeHeadline, HomeCenteredArea, SubHeadline }} >
+    <MDXProvider components={{ YellowBox, ImageCaption, HomeCenteredArea, HomeHeadline, SubHeadline, HomeAvatarImg }} >
       <Header siteTitle={data.site.siteMetadata.title} />
         <Container>
           <main>{children}</main>

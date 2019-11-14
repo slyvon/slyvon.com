@@ -44,17 +44,6 @@ const LinkNavItem = styled(Link)`
 
 `;
 
-const DarkModeLink = styled.a`
-  text-decoration: none;
-`;
-
-const DarkModeIcon = styled.svg`
-height: 17px;
-  width: 17px;
-  display: block;
-  float: right;
-  fill: #777;
-`;
  
 // Output
   const Header = () => (

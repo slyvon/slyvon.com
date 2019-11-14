@@ -1,6 +1,6 @@
 import React from "react"
 import styled from '@emotion/styled'
-import Avatar from "../images/sly-avatar-no-bg.svg"
+import Avatar from "../images/sly-avatar-main.svg"
 
 // Styled Components
 const Box = styled.div`
