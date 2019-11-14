@@ -12,7 +12,6 @@ import styled from '@emotion/styled'
 import Header from "./header"
 import Footer from "./footer"
 import { ThemeProvider } from 'emotion-theming'
-import Portfolio from "../components/portfolio"
 
 
 
@@ -59,6 +58,7 @@ const theme = {
 
 
 // Styled Components
+
 
 
 const HomeCenteredArea = styled.div`
@@ -187,7 +187,7 @@ p img {
   height: auto;
   margin: 1rem auto;
   max-width: 100%;
-  border-radius: 1%;
+  border-radius: 3px;
 }
 
 h4 {
@@ -260,7 +260,7 @@ const Layout = ({ children }) => {
         }
       `} />
 
-    <MDXProvider components={{ YellowBox, ImageCaption, HomeCenteredArea, HomeHeadline, SubHeadline, HomeAvatarImg, Portfolio }} >
+    <MDXProvider components={{ YellowBox, ImageCaption, HomeCenteredArea, HomeHeadline, SubHeadline, HomeAvatarImg }} >
       <Header siteTitle={data.site.siteMetadata.title} />
         <Container>
           <main>{children}</main>
