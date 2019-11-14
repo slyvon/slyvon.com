@@ -12,6 +12,8 @@ import styled from '@emotion/styled'
 import Header from "./header"
 import Footer from "./footer"
 import { ThemeProvider } from 'emotion-theming'
+import Portfolio from "../components/portfolio"
+
 
 
 // Site-wide constants
@@ -258,7 +260,7 @@ const Layout = ({ children }) => {
         }
       `} />
 
-    <MDXProvider components={{ YellowBox, ImageCaption, HomeCenteredArea, HomeHeadline, SubHeadline, HomeAvatarImg }} >
+    <MDXProvider components={{ YellowBox, ImageCaption, HomeCenteredArea, HomeHeadline, SubHeadline, HomeAvatarImg, Portfolio }} >
       <Header siteTitle={data.site.siteMetadata.title} />
         <Container>
           <main>{children}</main>
