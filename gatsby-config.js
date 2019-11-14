@@ -8,6 +8,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-sass`,
+   
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
@@ -36,6 +37,7 @@ module.exports = {
         defaultQuality: 75,
       },
     },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -43,6 +45,7 @@ module.exports = {
           default: require.resolve("./src/components/layout"),
         },
         plugins: [
+          
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -52,6 +55,14 @@ module.exports = {
           },
         ],
         gatsbyRemarkPlugins: [
+        
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow noopener noreferrer"
+            }
+          },
           // gatsby-remark-relative-images has to go before gatsby-remark-images
           'gatsby-remark-relative-images',
           {
@@ -78,18 +89,16 @@ module.exports = {
         ],
       }
     },
-    
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Slyvon Blanco`,
+        short_name: `@slyvon`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#f5f5f5`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
