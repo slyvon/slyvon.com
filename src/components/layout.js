@@ -7,12 +7,11 @@ import { MDXProvider } from "@mdx-js/react"
 // Components and styles
 
 import "../styles/tachyons.css"
-import { css, jsx, Global } from "@emotion/core"
+import { css, Global } from "@emotion/core"
 import styled from '@emotion/styled'
 import Header from "./header"
 import Footer from "./footer"
 import { ThemeProvider } from 'emotion-theming'
-import { Link } from "gatsby"
 
 
 // Site-wide constants
@@ -60,8 +59,7 @@ const theme = {
 // Styled Components
 
 
-const ContentLink = styled(Link)`
-`;
+
 
 const HomeCenteredArea = styled.div`
   margin-left: auto;
@@ -257,7 +255,7 @@ const Layout = ({ children }) => {
         }
       `} />
 
-    <MDXProvider components={{ YellowBox, ImageCaption, HomeHeadline, HomeCenteredArea, SubHeadline, ContentLink }} >
+    <MDXProvider components={{ YellowBox, ImageCaption, HomeHeadline, HomeCenteredArea, SubHeadline }} >
       <Header siteTitle={data.site.siteMetadata.title} />
         <Container>
           <main>{children}</main>

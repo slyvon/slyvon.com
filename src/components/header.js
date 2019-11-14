@@ -57,7 +57,7 @@ height: 17px;
 `;
  
 // Output
-  const Header = ({}) => (
+  const Header = () => (
   <NavBar className="mw8 pa3">
     <Brand className="f4 fw7 tracked-tight">
       <LinkLogo to="/">slyvon<span class="fw3">blanco</span></LinkLogo>

@@ -11,7 +11,7 @@ import { PageTitle } from "../components/layout"
 
 
 export const pageQuery = graphql`
-  query BlogPostQuery($slug: String) {
+  query SinglePageQuery($slug: String) {
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
@@ -26,7 +26,7 @@ export default function PageTemplate({ data: { mdx } }) {
   return (
     
     <Layout>
-      
+     
       <SEO title={mdx.frontmatter.title} />
       <PageTitle>{mdx.frontmatter.title}</PageTitle>
       <MDXRenderer>{mdx.body}</MDXRenderer>

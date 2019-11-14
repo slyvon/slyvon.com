@@ -4,7 +4,6 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { css, jsx } from "@emotion/core"
 import styled from '@emotion/styled'
 import { PageTitle } from "../components/layout"
 
@@ -20,7 +19,10 @@ const BlogList = styled.h5`
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx (filter: { frontmatter: { type: {eq: "blog"}}}) {
+      allMdx (
+        filter: { frontmatter: { type: {eq: "blog"}}}
+        sort: { order: DESC, fields: [frontmatter___date] }
+        ) {
         edges {
           node {
             frontmatter {

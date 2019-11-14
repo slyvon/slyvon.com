@@ -14,12 +14,25 @@ module.exports.onCreateNode = ({ node, actions}) => {
 
 }
 
+// Pages
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogTemplate = path.resolve('./src/templates/single.js')
+  const pageTemplate = path.resolve('./src/templates/page.js')
+  const blogTemplate = path.resolve('./src/templates/blog-post.js')
   const res = await graphql(`
     query {
-      allMdx {
+      pageMdx: 
+      allMdx (filter: { frontmatter: { type: {eq: "page"}}}) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+      blogMdx: 
+      allMdx (filter: { frontmatter: { type: {eq: "blog"}}}) {
         edges {
           node {
             fields {
@@ -31,7 +44,20 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  res.data.allMdx.edges.forEach ((edge) => {
+
+
+  res.data.pageMdx.edges.forEach ((edge) => {
+    createPage ({
+      component: pageTemplate,
+      path: `/${edge.node.fields.slug}`,
+      context: {
+        slug: edge.node.fields.slug
+      }
+    })
+  })
+
+
+  res.data.blogMdx.edges.forEach ((edge) => {
     createPage ({
       component: blogTemplate,
       path: `/${edge.node.fields.slug}`,
