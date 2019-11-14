@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-sass`,
    
+   
     {
       resolve: `gatsby-plugin-emotion`,
       options: {

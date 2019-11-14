@@ -66,9 +66,6 @@ height: 17px;
       <LinkNavItem to="/blog">Blog</LinkNavItem>
       <LinkNavItem to="/tools">Tools</LinkNavItem>
       <LinkNavItem to="/work">Work</LinkNavItem>
-        <DarkModeLink href="#" id="darkSwitch" className="f5">
-	    	  <DarkModeIcon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 2v16a8 8 0 1 0 0-16zm0 18a10 10 0 1 1 0-20 10 10 0 0 1 0 20z"/></DarkModeIcon>
-		    </DarkModeLink>
   </Menu>
 </NavBar>
 )
