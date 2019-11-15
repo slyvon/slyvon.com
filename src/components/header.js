@@ -4,7 +4,7 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import Avatar from "../images/sly-avatar-main.svg"
-import { colors } from "../utils/styles"
+import { colors } from "../styles/styles"
 
 // Styled Components
 const NavBar = styled.header`

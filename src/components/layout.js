@@ -7,7 +7,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { Global, css } from "@emotion/core"
 
 // Components and styles
-import { colors, type, device, gutter } from "../utils/styles"
+import { colors, type, device, gutter } from "../styles/styles"
 import "../styles/tachyons.css"
 import Header from "./header"
 import Footer from "./footer"
