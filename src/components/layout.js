@@ -8,7 +8,7 @@ import { Global, css } from "@emotion/core"
 
 
 // Components and styles
-import { colors, type } from "./styles"
+import { colors, type, device, gutter, offset, offsetXxl } from "../utils/styles"
 import "../styles/tachyons.css"
 import Header from "./header"
 import Footer from "./footer"
@@ -73,11 +73,19 @@ export const Container = styled.div`
   padding-top: 0;
   display: flex;
   flex-direction: column;
+
+  ${device.mobile} {
+    margin-top: 0;
+    padding-right: ${gutter.default};
+    padding-left: ${gutter.default};
+    position: relative;
+  }
+
   `;
 
 export const Body = styled.div`
   margin: 0 auto;
-  max-width: ${props => props.wide ? "700px" : "580px"};
+  max-width: ${props => props.wide ? "740px" : "600px"};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -88,9 +96,6 @@ export const Body = styled.div`
   flex-flow: wrap;
   flex-direction: column-reverse;}
   }
-
-  
-
 
 
   a {

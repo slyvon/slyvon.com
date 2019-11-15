@@ -47,7 +47,7 @@ const LinkNavItem = styled(Link)`
  
 // Output
   const Header = () => (
-  <NavBar className="mw8 pa3">
+  <NavBar className="mw8 pv3">
     <Brand className="f4 fw7 tracked-tight">
       <LinkLogo to="/">slyvon<span class="fw3">blanco</span></LinkLogo>
     </Brand>
