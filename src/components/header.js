@@ -3,8 +3,15 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from '@emotion/styled'
 
+import Avatar from "../images/sly-avatar-main.svg"
+import { colors } from "../utils/styles"
+
 // Styled Components
 const NavBar = styled.header`
+position: sticky;
+background: ${colors.navBG};
+  top: 0;
+  z-index: 100;
   box-sizing: border-box;
   display: table;
   width: 100%;
@@ -18,6 +25,12 @@ const NavBar = styled.header`
 
 const Brand = styled.div`
   display: table;
+`;
+
+const HomeAvatarImg = styled.img`
+  width: 40px;
+  height: auto;
+
 `;
 
 const LinkLogo = styled(Link)`
@@ -48,10 +61,12 @@ const LinkNavItem = styled(Link)`
 // Output
   const Header = () => (
   <NavBar className="mw8 pv3">
-    <Brand className="f4 fw7 tracked-tight">
-      <LinkLogo to="/">slyvon<span class="fw3">blanco</span></LinkLogo>
+    <Brand className="f4 fw7 tracked-tight v-btm">
+      <LinkLogo to="/">
+      <HomeAvatarImg src={Avatar} />
+      </LinkLogo>
     </Brand>
-   <Menu className="f6 fw3">
+   <Menu className="f6 v-mid">
       <LinkNavItem to="/blog">Blog</LinkNavItem>
       <LinkNavItem to="/tools">Tools</LinkNavItem>
       <LinkNavItem to="/work">Work</LinkNavItem>

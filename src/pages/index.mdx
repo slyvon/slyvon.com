@@ -6,13 +6,31 @@ type: "page"
 
 import { Body } from "../components/layout"
 import SEO from "../components/seo"
+import styled from '@emotion/styled'
 import MainAvatar from "../images/sly-avatar-main.svg"
+
+export const HomeCenteredArea = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  vertical-align: middle;
+`;
+
+export const HomeHeadline = styled.h5`
+      margin-top: 0;
+      line-height: 1;
+`;
+
+export const SubHeadline = styled.h5`
+      margin-top: 0;
+      line-height: 1;
+`;
+
 
 <SEO title="Home" />
 <Body>
 
 <HomeCenteredArea className="pv4 measure">
- <HomeAvatarImg src={MainAvatar} />
 <HomeHeadline className="fw2 f2 mb2 black-80">
 Hi, I'm <span class="fw7">Slyvon Blanco</span></HomeHeadline>
 <SubHeadline className="fw2 f4 gray">

@@ -14,31 +14,10 @@ import Header from "./header"
 import Footer from "./footer"
 
 // Styled Components
-export const HomeCenteredArea = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  vertical-align: middle;
-`;
-
-export const HomeHeadline = styled.h5`
-      margin-top: 0;
-      line-height: 1;
-`;
-
-export const SubHeadline = styled.h5`
-      margin-top: 0;
-      line-height: 1;
-`;
-
-export const HomeAvatarImg = styled.img`
-  width: 20%;
-
-`;
-
 export const ImageWide = styled.div`
   width: auto;
   height: auto;
+  
     @media (min-width: 700px) {
       max-width: calc(100% + 120px);
       margin-left: -60px;
@@ -85,7 +64,7 @@ export const Container = styled.div`
 
 export const Body = styled.div`
   margin: 0 auto;
-  max-width: ${props => props.wide ? "740px" : "600px"};
+  max-width: ${props => props.wide ? "740px" : "580px"};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -252,7 +231,7 @@ return (
   `} />
 
 <Container>
-  <MDXProvider components={{ YellowBox, HomeCenteredArea, HomeHeadline, SubHeadline, HomeAvatarImg, Container, Body, ImageWide }} >
+  <MDXProvider components={{ YellowBox, Container, Body, ImageWide }} >
     <Header siteTitle={data.site.siteMetadata.title} />
       
         <main>{children}</main>

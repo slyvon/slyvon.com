@@ -5,6 +5,7 @@
       linkHover: '#fff',
       linkHoverBG: '#ed213a',
       imageCaption: '#888',
+      navBG: '#f5f5f5',
       codeBG: '#ddd',
       pageTitle: '#1b1b1b',
       content: 'rgba(0,0,0,.8)',
