@@ -8,7 +8,22 @@ module.exports = {
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-catch-links`,
 		`gatsby-plugin-sass`,
-
+		{
+			resolve: `gatsby-plugin-netlify`,
+			options: {
+				headers: {
+					"page-data/*": [
+						"Cache-Control: no-cache",
+					],
+					"/*": [
+						"Cache-Control: no-cache",
+					],
+					"static/*": [
+						"Cache-Control: public, max-age=31536000, immutable",
+					],
+				},
+				}
+			},
 		{
 			resolve: `gatsby-plugin-emotion`,
 			options: {
