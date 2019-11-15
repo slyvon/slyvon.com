@@ -18,7 +18,7 @@ module.exports.onCreateNode = ({ node, actions}) => {
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const pageTemplate = path.resolve('./src/templates/page.js')
-  const widepageTemplate = path.resolve('./src/templates/page-wide.js')
+  const widepageTemplate = path.resolve('./src/templates/wide-page.js')
   const blogTemplate = path.resolve('./src/templates/blog-post.js')
   const res = await graphql(`
     query {
@@ -33,7 +33,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       }
       widepageMdx: 
-      allMdx (filter: { frontmatter: { type: {eq: "wide-page"}}}) {
+      allMdx (filter: { frontmatter: { type: {eq: "wide"}}}) {
         edges {
           node {
             fields {

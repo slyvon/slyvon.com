@@ -14,27 +14,37 @@ import Header from "./header"
 import Footer from "./footer"
 
 // Styled Components
-
-const HomeCenteredArea = styled.div`
+export const HomeCenteredArea = styled.div`
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   vertical-align: middle;
 `;
 
-const HomeHeadline = styled.h1`
+export const HomeHeadline = styled.h5`
       margin-top: 0;
       line-height: 1;
 `;
 
-const SubHeadline = styled.h1`
+export const SubHeadline = styled.h5`
       margin-top: 0;
       line-height: 1;
 `;
 
-const HomeAvatarImg = styled.img`
+export const HomeAvatarImg = styled.img`
   width: 20%;
 
+`;
+
+export const ImageWide = styled.div`
+  width: auto;
+  height: auto;
+    @media (min-width: 700px) {
+      max-width: calc(100% + 120px);
+      margin-left: -60px;
+      margin-right: -60px;
+
+  }
 `;
 
 const YellowBox = styled.div`
@@ -47,15 +57,6 @@ const YellowBox = styled.div`
   color: #111;
 `;
 
-const ImageCaption = styled.span`
-  display: inherit;
-  text-align: center;
-  font-size: 15px;
-  line-height: ${type.lineHeights.imageCaption};
-  color: ${colors.imageCaption};
-  margin-bottom: 40px;
-  `;
-
 export const PageTitle = styled.h1`
 font-size: ${type.fontSizes.pageTitle};
 font-weight: ${type.fontWeights.pageTitle};
@@ -66,9 +67,7 @@ margin-bottom: 3rem;
 
 
 // Container CSS
-
-
-const MainContainer = styled.div`
+export const Container = styled.div`
   background-color: #f5f5f5;
   margin: 0 auto;
   padding-top: 0;
@@ -76,9 +75,9 @@ const MainContainer = styled.div`
   flex-direction: column;
   `;
 
-export const InnerContainer = styled.div`
+export const Body = styled.div`
   margin: 0 auto;
-  max-width: 550px;
+  max-width: ${props => props.wide ? "700px" : "580px"};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -90,15 +89,7 @@ export const InnerContainer = styled.div`
   flex-direction: column-reverse;}
   }
 
-  @media (min-width: 700px) {
-    p img {
-      max-width: calc(100% + 50px);
-
-    width: auto;
-    margin-left: -25px;
-    margin-right: -25px;
-    }
-  }
+  
 
 
 
@@ -148,18 +139,24 @@ export const InnerContainer = styled.div`
        ol,
       ul {
         display: block;
-        margin-block-start: 2em;
-        margin-block-end: 2em;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
         padding-inline-start: 50px;
       }
     
       
+      figure {
+    display: block;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
      
-p img {
-  display: block;
-  border-radius: 2px;
+figure img {
+  border-radius: 3px;
   border: 1px solid #dad6e480;
 
 }
@@ -171,11 +168,22 @@ h4 {
   
 }
 
+h1 {
+  font-size: 2.5em;
+    font-weight: 700;
+    -webkit-letter-spacing: -0.015em;
+    -moz-letter-spacing: -0.015em;
+    -ms-letter-spacing: -0.015em;
+    letter-spacing: -0.015em;
+    color: #1b1b1b;
+    margin-bottom: 3rem;
+}
+
 h2,
 h3,
 h4 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   letter-spacing: -0.015em;
 }
 
@@ -191,13 +199,20 @@ h3 {
   font-weight: ${type.fontWeights.H3};
 }
    
-
-
-      hr {
-        margin-top: 20px;
+  hr {
+        margin-top: 10px;
         margin-bottom: 20px;
         border: 0;
+        width: 100%;
         border-top: 1px solid #e6e6e6;
+      }
+
+      figcaption {
+        text-align: center;
+  font-size: ${type.fontSizes.imageCaption};
+  line-height: ${type.lineHeights.imageCaption};
+  color: ${colors.imageCaption};
+  margin-top: 10px;
       }
       
       
@@ -231,15 +246,15 @@ return (
     }
   `} />
 
-<MainContainer>
-  <MDXProvider components={{ YellowBox, ImageCaption, HomeCenteredArea, HomeHeadline, SubHeadline, HomeAvatarImg }} >
+<Container>
+  <MDXProvider components={{ YellowBox, HomeCenteredArea, HomeHeadline, SubHeadline, HomeAvatarImg, Container, Body, ImageWide }} >
     <Header siteTitle={data.site.siteMetadata.title} />
-      <InnerContainer>
+      
         <main>{children}</main>
-      </InnerContainer>
+      
           <Footer />
   </MDXProvider>
-</MainContainer>
+</Container>
 </React.Fragment>
 
 )}

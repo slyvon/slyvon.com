@@ -8,11 +8,11 @@ const Box = styled.div`
 `;
 
 const AuthorBoxContent = styled.p`
-   font-size: 15px !important;
+   font-size: 16px !important;
   margin-bottom: 0px !important;
 `;
 
-const AboutTheAuthor = styled.h1`
+const AboutTheAuthor = styled.h5`
    margin-top: 0px;
 `;
 

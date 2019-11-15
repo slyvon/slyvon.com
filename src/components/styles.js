@@ -17,13 +17,14 @@
         H4: '1.2em',
         bodyText: '1.125em',
         yellowBox: '14px',
+        imageCaption: '15px',
       },
     
       fontWeights: {
         pageTitle: '700',
         H2: '700',
-        H3: '500',
-        H4: '400',
+        H3: '600',
+        H4: '500',
         linkWeight: '500',
       },
     

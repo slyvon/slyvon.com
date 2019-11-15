@@ -6,12 +6,13 @@ import SEO from "../components/seo"
 
 import styled from '@emotion/styled'
 import { PageTitle } from "../components/layout"
+import { Body } from "../components/layout"
 
 // Styled Components
-const BlogList = styled.h5`
-  margin: 1.5rem 0;
+const BlogList = styled.h6`
+  margin: 1.2rem 0;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1;
 `;
 
 
@@ -40,7 +41,7 @@ const BlogPage = () => {
   return (
   <Layout>
     <SEO title="Blog" />
-    
+    <Body>
     <PageTitle>Things I've Written</PageTitle>
     
       {data.allMdx.edges.map((edge) => {
@@ -53,6 +54,7 @@ const BlogPage = () => {
          
         )
       })}
+      </Body>
   </Layout>
   )
   }
