@@ -13,13 +13,13 @@ module.exports = {
 			options: {
 				headers: {
 					"page-data/*": [
-						"Cache-Control: no-cache",
+						"cache-control: no-cache",
 					],
 					"/*": [
-						"Cache-Control: no-cache",
+						"cache-control: no-cache",
 					],
 					"static/*": [
-						"Cache-Control: public, max-age=31536000, immutable",
+						"cache-control: public, max-age=31536000, immutable",
 					],
 				},
 				}
