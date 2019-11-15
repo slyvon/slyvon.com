@@ -12,7 +12,7 @@ import { Body } from "../components/layout"
 const BlogList = styled.h6`
   margin: 1.2rem 0;
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.5;
 `;
 
 

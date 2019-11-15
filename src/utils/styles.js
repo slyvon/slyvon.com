@@ -38,7 +38,7 @@
       }
     },
     device: {
-      mobile: `@media (min-width: 400px)`,
+      mobile: `@media (min-width: 320px)`,
       phablet: `@media (min-width: 550px)`,
       tablet: `@media (min-width: 750px)`,
       desktop: `@media (min-width: 1000px)`,

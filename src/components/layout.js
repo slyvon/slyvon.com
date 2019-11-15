@@ -8,7 +8,7 @@ import { Global, css } from "@emotion/core"
 
 
 // Components and styles
-import { colors, type, device, gutter, offset, offsetXxl } from "../utils/styles"
+import { colors, type, device, gutter } from "../utils/styles"
 import "../styles/tachyons.css"
 import Header from "./header"
 import Footer from "./footer"
