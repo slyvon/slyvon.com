@@ -12,13 +12,13 @@ module.exports = {
 			resolve: `gatsby-plugin-netlify`,
 			options: {
 				headers: {
-					"public/page-data/*": [
+					"public/page-data/": [
 						"cache-control: no-cache",
 					],
 					"/*": [
 						"cache-control: no-cache",
 					],
-					"public/static/*": [
+					"public/static/": [
 						"cache-control: public, max-age=31536000, immutable",
 					],
 				},
