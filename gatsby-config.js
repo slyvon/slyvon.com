@@ -8,6 +8,7 @@ module.exports = {
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-catch-links`,
 		`gatsby-plugin-sass`,
+		
 		{
 			resolve: "gatsby-plugin-netlify-cache",
 			options: {

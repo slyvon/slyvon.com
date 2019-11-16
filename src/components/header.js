@@ -4,7 +4,8 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import Avatar from "../images/sly-avatar-main.svg"
-import { colors } from "../styles/styles"
+import { colors, tachyons } from "../styles/theme"
+
 
 // Styled Components
 const NavBar = styled.header`
@@ -15,8 +16,11 @@ const NavBar = styled.header`
 	box-sizing: border-box;
 	display: table;
 	width: 100%;
+	max-width: ${tachyons.maxwidth.mw8};
 	margin-right: auto;
 	margin-left: auto;
+	padding-top: ${tachyons.spacing.s3};
+	padding-bottom: ${tachyons.spacing.s3};
 	margin-bottom: 4rem;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
@@ -25,6 +29,10 @@ const NavBar = styled.header`
 
 const Brand = styled.div`
 	display: table;
+	font-size: ${tachyons.size.f4};
+	font-weight: ${tachyons.weight.fw7};
+	letter-spacing: ${tachyons.letterspacing.tight};
+	vertical-align: bottom;
 `
 
 const HomeAvatarImg = styled.img`
@@ -42,6 +50,8 @@ const Menu = styled.div`
 	display: table-cell;
 	text-align: right;
 	text-transform: uppercase;
+	font-size: ${tachyons.size.f6};
+	vertical-align: middle;
 `
 
 const LinkNavItem = styled(Link)`
@@ -55,15 +65,16 @@ const LinkNavItem = styled(Link)`
 	}
 `
 
+
 // Output
 const Header = () => (
-	<NavBar className="mw8 pv3">
-		<Brand className="f4 fw7 tracked-tight v-btm">
+	<NavBar>
+		<Brand>
 			<LinkLogo to="/">
 				<HomeAvatarImg src={Avatar} />
 			</LinkLogo>
 		</Brand>
-		<Menu className="f6 v-mid">
+		<Menu>
 			<LinkNavItem to="/blog">Blog</LinkNavItem>
 			<LinkNavItem to="/tools">Tools</LinkNavItem>
 			<LinkNavItem to="/work">Work</LinkNavItem>

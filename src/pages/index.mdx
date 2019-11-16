@@ -8,20 +8,34 @@ import { Body } from "../components/layout"
 import SEO from "../components/seo"
 import styled from '@emotion/styled'
 import MainAvatar from "../images/sly-avatar-main.svg"
+import { colors, tachyons } from "../styles/theme"
 
 export const HomeCenteredArea = styled.div`
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   vertical-align: middle;
+  padding-top: ${tachyons.spacing.s4};
+  padding-bottom: ${tachyons.spacing.s4};
 `;
 
 export const HomeHeadline = styled.h5`
+      color: ${colors.homeHeadline};
       margin-top: 0;
+      margin-bottom: ${tachyons.spacing.s2};
       line-height: 1;
+      font-weight: ${tachyons.weight.fw2};
+      font-size: ${tachyons.size.f2};
+`;
+
+export const HomeBoldHeadline = styled.span`
+      font-weight: ${tachyons.weight.fw7};
 `;
 
 export const SubHeadline = styled.h5`
+      color: ${colors.homeSubheadline};
+      font-weight: ${tachyons.weight.fw2};
+      font-size: ${tachyons.size.f4};
       margin-top: 0;
       line-height: 1;
 `;
@@ -30,10 +44,10 @@ export const SubHeadline = styled.h5`
 <SEO title="Home" />
 <Body>
 
-<HomeCenteredArea className="pv4 measure">
-<HomeHeadline className="fw2 f2 mb2 black-80">
-Hi, I'm <span class="fw7">Slyvon Blanco</span></HomeHeadline>
-<SubHeadline className="fw2 f4 gray">
+<HomeCenteredArea>
+<HomeHeadline>
+Hi, I'm <HomeBoldHeadline>Slyvon Blanco</HomeBoldHeadline></HomeHeadline>
+<SubHeadline>
 (You can just call me Sly)
 </SubHeadline>
 </HomeCenteredArea>

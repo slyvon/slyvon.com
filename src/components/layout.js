@@ -7,8 +7,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { Global, css } from "@emotion/core"
 
 // Components and styles
-import { colors, type, device, gutter } from "../styles/styles"
-import "../styles/tachyons.css"
+import { colors, fonts, device, gutter } from "../styles/theme"
 import Header from "./header"
 import Footer from "./footer"
 
@@ -29,14 +28,14 @@ const YellowBox = styled.div`
 	padding: 2rem;
 	border: 1px solid ${colors.yellowBoxBorder};
 	border-radius: 2px;
-	font-size: ${type.fontSizes.yellowBox};
-	line-height: ${type.lineHeights.yellowBox};
+	font-size: ${fonts.fontSizes.yellowBox};
+	line-height: ${fonts.lineHeights.yellowBox};
 	color: ${colors.yellowBoxText};
 `
 
 export const PageTitle = styled.h1`
-	font-size: ${type.fontSizes.pageTitle};
-	font-weight: ${type.fontWeights.pageTitle};
+	font-size: ${fonts.fontSizes.pageTitle};
+	font-weight: ${fonts.fontWeights.pageTitle};
 	letter-spacing: -0.015em;
 	color: ${colors.pageTitle};
 	margin-bottom: 3rem;
@@ -44,7 +43,7 @@ export const PageTitle = styled.h1`
 
 // Container CSS
 export const Container = styled.div`
-	background-color: ${colors.mainContainerBG};
+	background-color: ${colors.background};
 	margin: 0 auto;
 	padding-top: 0;
 	display: flex;
@@ -93,27 +92,27 @@ export const Body = styled.div`
 	}
 
 	h2 {
-		font-size: ${type.fontSizes.H2};
-		font-weight: ${type.fontWeights.H2};
+		font-size: ${fonts.fontSizes.H2};
+		font-weight: ${fonts.fontWeights.H2};
 		color: ${colors.H2};
 	}
 
 	h3 {
-		font-size: ${type.fontSizes.H3};
-		font-weight: ${type.fontWeights.H3};
+		font-size: ${fonts.fontSizes.H3};
+		font-weight: ${fonts.fontWeights.H3};
 		color: ${colors.H3};
 	}
 
 	h4 {
-		line-height: ${type.lineHeights.H4};
-		font-size: ${type.fontSizes.H4};
-		font-weight: ${type.fontWeights.H4};
+		line-height: ${fonts.lineHeights.H4};
+		font-size: ${fonts.fontSizes.H4};
+		font-weight: ${fonts.fontWeights.H4};
 		color: ${colors.H4};
 	}
 
 	a {
 		color: ${colors.links};
-		font-weight: ${type.fontWeights.linkWeight};
+		font-weight: ${fonts.fontWeights.linkWeight};
 		text-decoration: none;
 		border-bottom: 2px solid ${colors.linkUnderline};
 	}
@@ -134,8 +133,8 @@ export const Body = styled.div`
 	}
 
 	p {
-		font-size: ${type.fontSizes.bodyText};
-		line-height: ${type.lineHeights.bodyText};
+		font-size: ${fonts.fontSizes.bodyText};
+		line-height: ${fonts.lineHeights.bodyText};
 		color: ${colors.content};
 		margin-top: 0;
 		margin-bottom: 1.5em;
@@ -144,8 +143,8 @@ export const Body = styled.div`
 	li {
 		margin-top: 0;
 		margin-bottom: 1.3em;
-		font-size: ${type.fontSizes.bodyText};
-		line-height: ${type.lineHeights.bodyText};
+		font-size: ${fonts.fontSizes.bodyText};
+		line-height: ${fonts.lineHeights.bodyText};
 		color: ${colors.content};
 	}
 
@@ -182,8 +181,8 @@ export const Body = styled.div`
 
 	figcaption {
 		text-align: center;
-		font-size: ${type.fontSizes.imageCaption};
-		line-height: ${type.lineHeights.imageCaption};
+		font-size: ${fonts.fontSizes.imageCaption};
+		line-height: ${fonts.lineHeights.imageCaption};
 		color: ${colors.imageCaption};
 		margin-top: 10px;
 	}
@@ -200,26 +199,29 @@ const Layout = ({ children }) => {
 			}
 		}
 	`)
+
 	// Output
 	return (
 		<React.Fragment>
+	
+			<Container>
 			<Global
 				styles={css`
 					html,
 					body {
+						background-color: ${colors.background};
 						height: 100%;
-						font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-							"Helvetica Neue", Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+						font-family: ${fonts.fontFamily.sitewide};
 						-webkit-font-smoothing: antialiased;
 						text-rendering: optimizeLegibility;
 						/* The html and body elements cannot have any padding or margin. */
 					}
 				`}
 			/>
-
-			<Container>
 				<MDXProvider components={{ YellowBox, Container, Body, ImageWide }}>
 					<Header siteTitle={data.site.siteMetadata.title} />
+					
+			
 
 					<main>{children}</main>
 
