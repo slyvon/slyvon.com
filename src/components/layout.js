@@ -7,9 +7,11 @@ import { MDXProvider } from "@mdx-js/react"
 import { Global, css } from "@emotion/core"
 
 // Components and styles
-import { colors, fonts, device, gutter } from "../styles/theme"
+import { ThemeProvider, useColorMode } from "theme-ui"
+import theme from "../styles/theme"
 import Header from "./header"
 import Footer from "./footer"
+
 
 // Styled Components
 export const ImageWide = styled.div`
@@ -24,35 +26,35 @@ export const ImageWide = styled.div`
 `
 
 const YellowBox = styled.div`
-	background: ${colors.yellowBoxBG};
+	background: ${props => props.theme.colors.yellowBoxBG};
 	padding: 2rem;
-	border: 1px solid ${colors.yellowBoxBorder};
+	border: 1px solid ${props => props.theme.colors.yellowBoxBorder};
 	border-radius: 2px;
-	font-size: ${fonts.fontSizes.yellowBox};
-	line-height: ${fonts.lineHeights.yellowBox};
-	color: ${colors.yellowBoxText};
+	font-size: ${props => props.theme.fonts.fontSizes.yellowBox};
+	line-height: ${props => props.theme.fonts.lineHeights.yellowBox};
+	color: ${props => props.theme.colors.yellowBoxText};
 `
 
 export const PageTitle = styled.h1`
-	font-size: ${fonts.fontSizes.pageTitle};
-	font-weight: ${fonts.fontWeights.pageTitle};
+	font-size: ${props => props.theme.fonts.fontSizes.pageTitle};
+	font-weight: ${props => props.theme.fonts.fontWeights.pageTitle};
 	letter-spacing: -0.015em;
-	color: ${colors.pageTitle};
+	color: ${props => props.theme.colors.pageTitle};
 	margin-bottom: 3rem;
 `
 
 // Container CSS
 export const Container = styled.div`
-	background-color: ${colors.background};
+	background-color: ${props => props.theme.colors.background};
 	margin: 0 auto;
 	padding-top: 0;
 	display: flex;
 	flex-direction: column;
 
-	${device.mobile} {
+	${props => props.theme.device.mobile} {
 		margin-top: 0;
-		padding-right: ${gutter.default};
-		padding-left: ${gutter.default};
+		padding-right: ${props => props.theme.gutter.default};
+		padding-left: ${props => props.theme.gutter.default};
 		position: relative;
 	}
 `
@@ -87,45 +89,45 @@ export const Body = styled.div`
 		-moz-letter-spacing: -0.015em;
 		-ms-letter-spacing: -0.015em;
 		letter-spacing: -0.015em;
-		color: ${colors.H1};
+		color: ${props => props.theme.colors.H1};
 		margin-bottom: 3rem;
 	}
 
 	h2 {
-		font-size: ${fonts.fontSizes.H2};
-		font-weight: ${fonts.fontWeights.H2};
-		color: ${colors.H2};
+		font-size: ${props => props.theme.fonts.fontSizes.H2};
+		font-weight: ${props => props.theme.fonts.fontWeights.H2};
+		color: ${props => props.theme.colors.H2};
 	}
 
 	h3 {
-		font-size: ${fonts.fontSizes.H3};
-		font-weight: ${fonts.fontWeights.H3};
-		color: ${colors.H3};
+		font-size: ${props => props.theme.fonts.fontSizes.H3};
+		font-weight: ${props => props.theme.fonts.fontWeights.H3};
+		color: ${props => props.theme.colors.H3};
 	}
 
 	h4 {
-		line-height: ${fonts.lineHeights.H4};
-		font-size: ${fonts.fontSizes.H4};
-		font-weight: ${fonts.fontWeights.H4};
-		color: ${colors.H4};
+		line-height: ${props => props.theme.fonts.lineHeights.H4};
+		font-size: ${props => props.theme.fonts.fontSizes.H4};
+		font-weight: ${props => props.theme.fonts.fontWeights.H4};
+		color: ${props => props.theme.colors.H4};
 	}
 
 	a {
-		color: ${colors.links};
-		font-weight: ${fonts.fontWeights.linkWeight};
+		color: ${props => props.theme.colors.links};
+		font-weight: ${props => props.theme.fonts.fontWeights.linkWeight};
 		text-decoration: none;
-		border-bottom: 2px solid ${colors.linkUnderline};
+		border-bottom: 2px solid ${props => props.theme.colors.linkUnderline};
 	}
 	a:hover {
-		color: ${colors.linkHover};
-		background: ${colors.linkHoverBG};
+		color: ${props => props.theme.colors.linkHover};
+		background: ${props => props.theme.colors.linkHoverBG};
 		text-decoration: none;
 		border-bottom: 0px;
 	}
 
 	code {
-		background: ${colors.codeBG};
-		font-size: 75% !important;
+		background: ${props => props.theme.colors.codeBG};
+		font-size: 95%;
 		overflow-wrap: break-word;
 		word-wrap: break-word;
 		padding: 0.1rem 0.3rem 0.2rem;
@@ -133,9 +135,9 @@ export const Body = styled.div`
 	}
 
 	p {
-		font-size: ${fonts.fontSizes.bodyText};
-		line-height: ${fonts.lineHeights.bodyText};
-		color: ${colors.content};
+		font-size: ${props => props.theme.fonts.fontSizes.bodyText};
+		line-height: ${props => props.theme.fonts.lineHeights.bodyText};
+		color: ${props => props.theme.colors.text};
 		margin-top: 0;
 		margin-bottom: 1.5em;
 	}
@@ -143,9 +145,9 @@ export const Body = styled.div`
 	li {
 		margin-top: 0;
 		margin-bottom: 1.3em;
-		font-size: ${fonts.fontSizes.bodyText};
-		line-height: ${fonts.lineHeights.bodyText};
-		color: ${colors.content};
+		font-size: ${props => props.theme.fonts.fontSizes.bodyText};
+		line-height: ${props => props.theme.fonts.lineHeights.bodyText};
+		color: ${props => props.theme.colors.text};
 	}
 
 	ol,
@@ -168,7 +170,7 @@ export const Body = styled.div`
 
 	figure img {
 		border-radius: 3px;
-		border: 1px solid ${colors.figureIMGBorder};
+		border: 1px solid ${props => props.theme.colors.figureIMGBorder};
 	}
 
 	hr {
@@ -176,20 +178,21 @@ export const Body = styled.div`
 		margin-bottom: 20px;
 		border: 0;
 		width: 100%;
-		border-top: 1px solid ${colors.hrLine};
+		border-top: 1px solid ${props => props.theme.colors.hrLine};
 	}
 
 	figcaption {
 		text-align: center;
-		font-size: ${fonts.fontSizes.imageCaption};
-		line-height: ${fonts.lineHeights.imageCaption};
-		color: ${colors.imageCaption};
+		font-size: ${props => props.theme.fonts.fontSizes.imageCaption};
+		line-height: ${props => props.theme.fonts.lineHeights.imageCaption};
+		color: ${props => props.theme.colors.imageCaption};
 		margin-top: 10px;
 	}
 `
 
 // Layout query
 const Layout = ({ children }) => {
+	const [colorMode, setColorMode] = useColorMode()
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -202,16 +205,17 @@ const Layout = ({ children }) => {
 
 	// Output
 	return (
-		<React.Fragment>
 	
+		
 			<Container>
+				<ThemeProvider theme={theme}>
 			<Global
 				styles={css`
 					html,
 					body {
-						background-color: ${colors.background};
 						height: 100%;
-						font-family: ${fonts.fontFamily.sitewide};
+						margin: 0;
+						font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
 						-webkit-font-smoothing: antialiased;
 						text-rendering: optimizeLegibility;
 						/* The html and body elements cannot have any padding or margin. */
@@ -221,14 +225,21 @@ const Layout = ({ children }) => {
 				<MDXProvider components={{ YellowBox, Container, Body, ImageWide }}>
 					<Header siteTitle={data.site.siteMetadata.title} />
 					
-			
+					<button
+        onClick={e => {
+          setColorMode(colorMode === 'default' ? 'dark' : 'default')
+        }}>
+        Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
+      </button>
 
 					<main>{children}</main>
 
 					<Footer />
 				</MDXProvider>
+				</ThemeProvider>
 			</Container>
-		</React.Fragment>
+			
+		
 	)
 }
 

@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
-import { colors, tachyons } from "../styles/theme"
 
 // Styled Components
 
@@ -16,23 +15,25 @@ const FooterArea = styled.footer`
 
 const FooterText = styled.footer`
 	display: block;
-	color: ${colors.footerText};
-	font-size: ${tachyons.size.f6};
+	color: ${props => props.theme.colors.footerText};
+	font-size: ${props => props.theme.tachyons.size.f6};
 `
 
 const FooterLink = styled(Link)`
-	color: ${colors.footerLink};
+	color: ${props => props.theme.colors.footerLink};
 	text-decoration: none;
 `
 
 const Footer = () => {
 	return (
+		
 		<FooterArea>
 			<FooterText>
 				© {new Date().getFullYear()} — Handcrafted by{" "}
 				<FooterLink to="/">Sly</FooterLink> using GatsbyJS
 			</FooterText>
 		</FooterArea>
+	
 	)
 }
 

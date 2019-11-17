@@ -1,18 +1,17 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Avatar from "../images/sly-avatar-main.svg"
-import { fonts, tachyons, colors } from "../styles/theme"
 
 // Styled Components
 const Box = styled.div`
 	background-color: white;
-	color: ${colors.bodyText};
-	margin-top: ${tachyons.spacing.s4};
-	margin-bottom: ${tachyons.spacing.s4};
-	padding: ${tachyons.spacing.s4};
-	line-height: ${fonts.lineHeights.bodyText};
+	color: ${props => props.theme.colors.bodyText};
+	margin-top: ${props => props.theme.tachyons.spacing.s4};
+	margin-bottom: ${props => props.theme.tachyons.spacing.s4};
+	padding: ${props => props.theme.tachyons.spacing.s4};
+	line-height: ${props => props.theme.fonts.lineHeights.bodyText};
 	border: 1px solid lightgray;
-	border-radius: ${tachyons.borderRadius.br2};
+	border-radius: ${props => props.theme.tachyons.borderRadius.br2};
 `
 
 const AuthorBoxContent = styled.p`
@@ -23,10 +22,10 @@ const AuthorBoxContent = styled.p`
 
 const AboutTheAuthor = styled.h5`
 	margin-top: 0px;
-	margin-bottom: ${tachyons.spacing.s2};
-			font-size: ${tachyons.size.f3};
-			letter-spacing: ${tachyons.letterspacing.tight};
-			line-height: ${fonts.lineHeights.bodyText};
+	margin-bottom: ${props => props.theme.tachyons.spacing.s2};
+			font-size: ${props => props.theme.tachyons.size.f3};
+			letter-spacing: ${props => props.theme.tachyons.letterspacing.tight};
+			line-height: ${props => props.theme.fonts.lineHeights.bodyText};
 `
 
 const AuthorBoxImg = styled.img`
@@ -38,6 +37,7 @@ const AuthorBoxImg = styled.img`
 
 const AuthorBox = () => {
 	return (
+	
 		<Box>
 			<AboutTheAuthor>
 				About the Author
@@ -51,6 +51,7 @@ const AuthorBox = () => {
 				wings.
 			</AuthorBoxContent>
 		</Box>
+	
 	)
 }
 

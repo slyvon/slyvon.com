@@ -21,7 +21,7 @@ export default {
 		homeSubheadline: gray7,
 
 		pageTitle: darkheader,
-		content: text,
+		text: text,
 		links: darklink,
 		linkUnderline: gray9,
 		linkHover: "white",
@@ -47,9 +47,9 @@ export default {
 				dark: {
 					background: gray9,
 					navBG: black2,
-					content: text,
-				},
-			},
+					text: text,
+				}
+			}
 	},
 	fonts: {
 		fontSizes: {
