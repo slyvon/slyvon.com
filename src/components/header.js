@@ -4,14 +4,13 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import Avatar from "../images/sly-avatar-main.svg"
-import { ThemeProvider } from 'theme-ui'
-import theme from "../styles/theme"
+import { useColorMode } from "theme-ui"
 
 
 // Styled Components
 const NavBar = styled.header`
 	position: sticky;
-	background: ${props => props.theme.colors.navBG};
+	background-color: ${props => props.theme.colors.background};
 	top: 0;
 	z-index: 100;
 	box-sizing: border-box;
@@ -58,18 +57,19 @@ const Menu = styled.div`
 const LinkNavItem = styled(Link)`
 	margin-right: 1rem;
 	text-decoration: none;
-	color: ${props => props.theme.colors.navLink};
+	color: ${props => props.theme.colors.gray};
 	display: inline-block;
 
 	:hover {
-		color: ${props => props.theme.colors.navLinkHover};
+		color: ${props => props.theme.colors.primary};
 	}
 `
 
 
 // Output
-const Header = () => (
-	<ThemeProvider theme={theme}>
+const Header = () => {
+	const [colorMode, setColorMode] = useColorMode()
+	return (
 	<NavBar>
 		<Brand>
 			<LinkLogo to="/">
@@ -80,10 +80,18 @@ const Header = () => (
 			<LinkNavItem to="/blog">Blog</LinkNavItem>
 			<LinkNavItem to="/tools">Tools</LinkNavItem>
 			<LinkNavItem to="/work">Work</LinkNavItem>
+			
+			<button
+        onClick={e => {
+          setColorMode(colorMode === 'light' ? 'dark' : 'light')
+        }}>
+        Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+      </button>
+
 		</Menu>
 	</NavBar>
-	</ThemeProvider>
-)
+
+)}
 
 Header.propTypes = {
 	siteTitle: PropTypes.string,

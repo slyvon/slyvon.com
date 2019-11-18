@@ -5,15 +5,16 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import styled from "@emotion/styled"
-import { PageTitle } from "../components/layout"
-import { Body } from "../components/layout"
+import { PageTitle, Body } from "../components/layout"
+import { Styled } from 'theme-ui'
 
 // Styled Components
-const BlogList = styled.h6`
+const BlogList = styled.h5`
 	margin: 1.2rem 0;
 	font-size: 18px;
 	line-height: 1.5;
 `
+
 
 // Query
 const BlogPage = () => {
@@ -40,15 +41,15 @@ const BlogPage = () => {
 	return (
 		<Layout>
 			<SEO title="Blog" />
-			<Body>
+				<Body>
 				<PageTitle>Things I've Written</PageTitle>
-
+			
 				{data.allMdx.edges.map(edge => {
 					return (
 						<BlogList>
-							<Link to={`${edge.node.fields.slug}`}>
+							<Styled.a as={Link} to={`${edge.node.fields.slug}`}>
 								{edge.node.frontmatter.title}
-							</Link>
+							</Styled.a>
 						</BlogList>
 					)
 				})}

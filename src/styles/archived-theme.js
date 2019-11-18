@@ -1,56 +1,36 @@
-const lightBG = "#f5f5f5"
-const darkheader = "#1b1b1b"
-const catchyred = "#ed213a"
-const text = "rgba(0,0,0,.8)"
-const gray9 = "#999"
-const gray8 = "#888"
-const gray7 = "#777"
-const darklink = "#111"
-const black2 = "rgba(0, 0, 0, 0.8)"
-
-
 export default {
+  
 	colors: {
-		background: lightBG,
-
-		navBG: lightBG,
-		navLink: gray7,
-		navLinkHover: "#444",
-
-		homeHeadline: black2,
-		homeSubheadline: gray7,
-
-		pageTitle: darkheader,
-		content: text,
-		links: darklink,
-		linkUnderline: gray9,
-		linkHover: "white",
-		linkHoverBG: catchyred,
-
-		H1: darkheader,
-		H2: darkheader,
-		H3: darkheader,
-		H4: darkheader,
-
-		figureIMGBorder: "#dad6e480",
-		imageCaption: gray8,
-		hrLine: "#e6e6e6",
-		codeBG: "#ddd",
-		yellowBoxBG: "#faf5d6",
-		yellowBoxBorder: "#ddd280",
-		yellowBoxText: text,
-
-		footerText: gray9,
-		footerLink: gray9,
-	
+		background: "#f5f5f5",
+    text: "rgba(0,0,0,.8)",
+    primary: "#111",
+    secondary: "#ed213a",
+    accent: "#999",
+    muted: "#999",
+    gray: "#777",
+    darken: "#1b1b1b",
 			modes: {
 				dark: {
-					background: gray9,
-					navBG: black2,
-					content: text,
-				},
-			},
-	},
+					background: "#000",
+          text: "#fff",
+          primary: "#fff",
+          secondary: "#fff",
+          accent: "#fff",
+          muted: "#fff",
+          gray: "#1b1b1b",
+				}
+			}
+  },
+  styles: {
+    p: {
+      fontSize: '18px',
+      lineHeight: '1.5',
+    },
+    a: {
+      fontWeight: "500",
+      color: "primary",
+    }
+  },
 	fonts: {
 		fontSizes: {
 			pageTitle: "2.5em",
@@ -59,7 +39,6 @@ export default {
 			H4: "1.2em",
 			bodyText: "1.125em",
 			yellowBox: "14px",
-			imageCaption: "15px",
 		},
 
 		fontWeights: {
@@ -76,7 +55,6 @@ export default {
 			H4: "1.5",
 			bodyText: "1.5",
 			yellowBox: "1.5",
-			imageCaption: "1.2",
 		},
 	},
 	tachyons: {

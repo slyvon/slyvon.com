@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 
-// Styled Components
-
 const FooterArea = styled.footer`
 	margin-right: auto;
 	margin-left: auto;
@@ -15,12 +13,12 @@ const FooterArea = styled.footer`
 
 const FooterText = styled.footer`
 	display: block;
-	color: ${props => props.theme.colors.footerText};
+	color: ${props => props.theme.colors.gray};
 	font-size: ${props => props.theme.tachyons.size.f6};
 `
 
 const FooterLink = styled(Link)`
-	color: ${props => props.theme.colors.footerLink};
+	color: ${props => props.theme.colors.gray};
 	text-decoration: none;
 `
 

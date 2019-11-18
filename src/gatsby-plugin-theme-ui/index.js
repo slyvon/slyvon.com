@@ -1,83 +1,115 @@
-const lightBG = "#f5f5f5"
-const darkheader = "#1b1b1b"
+const offwhite = "#f5f5f5"
+const darkest = "#1b1b1b"
 const catchyred = "#ed213a"
 const text = "rgba(0,0,0,.8)"
+const washedyellow = "#faf5d6"
 const gray9 = "#999"
-const gray8 = "#888"
 const gray7 = "#777"
 const darklink = "#111"
-const black2 = "rgba(0, 0, 0, 0.8)"
-
 
 export default {
+  initialColorModeName: 'light',
 	colors: {
-		background: lightBG,
-
-		navBG: lightBG,
-		navLink: gray7,
-		navLinkHover: "#444",
-
-		homeHeadline: black2,
-		homeSubheadline: gray7,
-
-		pageTitle: darkheader,
-		text: text,
-		links: darklink,
-		linkUnderline: gray9,
-		linkHover: "white",
-		linkHoverBG: catchyred,
-
-		H1: darkheader,
-		H2: darkheader,
-		H3: darkheader,
-		H4: darkheader,
-
-		figureIMGBorder: "#dad6e480",
-		imageCaption: gray8,
-		hrLine: "#e6e6e6",
-		codeBG: "#ddd",
-		yellowBoxBG: "#faf5d6",
-		yellowBoxBorder: "#ddd280",
-		yellowBoxText: text,
-
-		footerText: gray9,
-		footerLink: gray9,
-	
-			modes: {
+    modes: {
+      light: {
+        background: offwhite,
+        text: text,
+        primary: darklink,
+        secondary: catchyred,
+        accent: washedyellow,
+        muted: gray9,
+        gray: gray7,
+        darken: darkest,
+        authorboxBG: "white",
+        authorboxBorder: "#ddd",
+        yellowboxBG: washedyellow,
+        yellowboxBorder: "#ddd280",
+        codeBG: "#ddd",
+        border: "#e6e6e6",
+      },
 				dark: {
-					background: gray9,
-					navBG: black2,
-					text: text,
-				}
-			}
-	},
+					background: darkest,
+          text: offwhite,
+          primary: offwhite,
+          secondary: catchyred,
+          accent: "#333",
+          muted: gray9,
+          gray: gray7,
+          darken: "white",
+          authorboxBG: "#333",
+          authorboxBorder: darklink,
+          yellowboxBG: "#333",
+        yellowboxBorder: darklink,
+        codeBG: gray7,
+        border: "#333",
+				},
+			},
+  },
+  styles: {
+    p: {
+      fontSize: '18px',
+      lineHeight: '1.5',
+    },
+    a: {
+      fontWeight: "500",
+     color: "primary",
+      textDecoration: "none",
+      borderBottom: "2px solid gray",
+      "&:hover": {
+        color: offwhite,
+          backgroundColor: "secondary",
+          borderBottom: "none",
+          textDecoration: "none",
+        }
+    },
+    hr: {
+      marginTop: "20px",
+      marginBottom: "20px",
+      border: 0,
+      color: "border",
+      borderTop: "1px solid",
+      width: "100%",
+    },
+    inlineCode: {
+      backgroundColor: "codeBG",
+      fontSize: "90%",
+      padding: "0.1rem 0.3rem 0.2rem",
+      borderRadius: "0.2rem",
+      wordWrap: "break-word",
+      overflowWrap: "break-word",
+    },
+    li: {
+      marginBottom: "1.3em",
+      marginTop: 0,
+    },
+    h1: {
+      fontSize: "2.5em",
+      fontWeight: "700",
+      letterSpacing: "-.05em",
+    },
+    h2: {
+      fontSize: "1.62em",
+      fontWeight: "700",
+      lineHeight: "1.25",
+      letterSpacing: "-.05em",
+    },
+    h3: {
+      fontSize: "1.375em",
+      fontWeight: "600",
+      lineHeight: "1.25",
+      color: "darken",
+      letterSpacing: "-.05em",
+    },
+    h4: {
+      fontSize: "1.2em",
+      fontWeight: "600",
+      lineHeight: "1.25",
+      color: "darken",
+      letterSpacing: "-.05em",
+    },
+  },
 	fonts: {
-		fontSizes: {
-			pageTitle: "2.5em",
-			H2: "1.62em",
-			H3: "1.375em",
-			H4: "1.2em",
-			bodyText: "1.125em",
-			yellowBox: "14px",
-			imageCaption: "15px",
-		},
-
-		fontWeights: {
-			pageTitle: "700",
-			H2: "700",
-			H3: "600",
-			H4: "500",
-			linkWeight: "500",
-		},
-
-		lineHeights: {
-			H2: "1.2",
-			H3: "1.4",
-			H4: "1.5",
-			bodyText: "1.5",
-			yellowBox: "1.5",
-			imageCaption: "1.2",
-		},
+	
 	},
 	tachyons: {
 		spacing: {

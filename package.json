@@ -9,12 +9,12 @@
     "@emotion/styled": "^10.0.23",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
+    "@theme-ui/components": "^0.2.49",
     "babel-plugin-styled-components": "^1.10.6",
     "emotion-theming": "^10.0.19",
     "gatsby": "^2.17.6",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-catch-links": "^2.1.15",
-    "gatsby-plugin-dark-mode": "^1.1.0",
     "gatsby-plugin-emotion": "^4.1.14",
     "gatsby-plugin-manifest": "^2.2.25",
     "gatsby-plugin-mdx": "^1.0.55",
@@ -27,7 +27,6 @@
     "gatsby-plugin-sharp": "^2.2.36",
     "gatsby-plugin-styled-components": "^3.1.12",
     "gatsby-plugin-theme-ui": "^0.2.43",
-    "gatsby-plugin-use-dark-mode": "^1.1.2",
     "gatsby-remark-embed-video": "^2.0.1",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^3.1.29",
@@ -43,8 +42,7 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.4.1",
-    "theme-ui": "^0.2.49",
-    "use-dark-mode": "^2.3.1"
+    "theme-ui": "^0.2.49"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

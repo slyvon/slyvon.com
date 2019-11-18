@@ -3,12 +3,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
 import { Global, css } from "@emotion/core"
 
 // Components and styles
-import { ThemeProvider, useColorMode } from "theme-ui"
-import theme from "../styles/theme"
+import { ThemeProvider } from "theme-ui"
+import theme from "../gatsby-plugin-theme-ui/index"
 import Header from "./header"
 import Footer from "./footer"
 
@@ -17,6 +16,7 @@ import Footer from "./footer"
 export const ImageWide = styled.div`
 	width: auto;
 	height: auto;
+	
 
 	@media (min-width: 700px) {
 		max-width: calc(100% + 120px);
@@ -25,22 +25,19 @@ export const ImageWide = styled.div`
 	}
 `
 
-const YellowBox = styled.div`
-	background: ${props => props.theme.colors.yellowBoxBG};
+export const YellowBox = styled.div`
+	background-color: ${props => props.theme.colors.yellowboxBG};
 	padding: 2rem;
-	border: 1px solid ${props => props.theme.colors.yellowBoxBorder};
+	border: 1px solid ${props => props.theme.colors.yellowboxBorder};
 	border-radius: 2px;
-	font-size: ${props => props.theme.fonts.fontSizes.yellowBox};
-	line-height: ${props => props.theme.fonts.lineHeights.yellowBox};
-	color: ${props => props.theme.colors.yellowBoxText};
+	line-height: 1.5;
+	font-size: 14px;
 `
 
 export const PageTitle = styled.h1`
-	font-size: ${props => props.theme.fonts.fontSizes.pageTitle};
-	font-weight: ${props => props.theme.fonts.fontWeights.pageTitle};
 	letter-spacing: -0.015em;
-	color: ${props => props.theme.colors.pageTitle};
 	margin-bottom: 3rem;
+	font-size: 2.5em;
 `
 
 // Container CSS
@@ -74,82 +71,6 @@ export const Body = styled.div`
 		}
 	}
 
-	h2,
-	h3,
-	h4 {
-		margin-top: 20px;
-		margin-bottom: 20px;
-		letter-spacing: -0.015em;
-	}
-
-	h1 {
-		font-size: 2.5em;
-		font-weight: 700;
-		-webkit-letter-spacing: -0.015em;
-		-moz-letter-spacing: -0.015em;
-		-ms-letter-spacing: -0.015em;
-		letter-spacing: -0.015em;
-		color: ${props => props.theme.colors.H1};
-		margin-bottom: 3rem;
-	}
-
-	h2 {
-		font-size: ${props => props.theme.fonts.fontSizes.H2};
-		font-weight: ${props => props.theme.fonts.fontWeights.H2};
-		color: ${props => props.theme.colors.H2};
-	}
-
-	h3 {
-		font-size: ${props => props.theme.fonts.fontSizes.H3};
-		font-weight: ${props => props.theme.fonts.fontWeights.H3};
-		color: ${props => props.theme.colors.H3};
-	}
-
-	h4 {
-		line-height: ${props => props.theme.fonts.lineHeights.H4};
-		font-size: ${props => props.theme.fonts.fontSizes.H4};
-		font-weight: ${props => props.theme.fonts.fontWeights.H4};
-		color: ${props => props.theme.colors.H4};
-	}
-
-	a {
-		color: ${props => props.theme.colors.links};
-		font-weight: ${props => props.theme.fonts.fontWeights.linkWeight};
-		text-decoration: none;
-		border-bottom: 2px solid ${props => props.theme.colors.linkUnderline};
-	}
-	a:hover {
-		color: ${props => props.theme.colors.linkHover};
-		background: ${props => props.theme.colors.linkHoverBG};
-		text-decoration: none;
-		border-bottom: 0px;
-	}
-
-	code {
-		background: ${props => props.theme.colors.codeBG};
-		font-size: 95%;
-		overflow-wrap: break-word;
-		word-wrap: break-word;
-		padding: 0.1rem 0.3rem 0.2rem;
-		border-radius: 0.2rem;
-	}
-
-	p {
-		font-size: ${props => props.theme.fonts.fontSizes.bodyText};
-		line-height: ${props => props.theme.fonts.lineHeights.bodyText};
-		color: ${props => props.theme.colors.text};
-		margin-top: 0;
-		margin-bottom: 1.5em;
-	}
-
-	li {
-		margin-top: 0;
-		margin-bottom: 1.3em;
-		font-size: ${props => props.theme.fonts.fontSizes.bodyText};
-		line-height: ${props => props.theme.fonts.lineHeights.bodyText};
-		color: ${props => props.theme.colors.text};
-	}
-
 	ol,
 	ul {
 		display: block;
@@ -170,29 +91,21 @@ export const Body = styled.div`
 
 	figure img {
 		border-radius: 3px;
-		border: 1px solid ${props => props.theme.colors.figureIMGBorder};
+		border: 1px solid ${props => props.theme.colors.border};
 	}
 
-	hr {
-		margin-top: 10px;
-		margin-bottom: 20px;
-		border: 0;
-		width: 100%;
-		border-top: 1px solid ${props => props.theme.colors.hrLine};
-	}
 
 	figcaption {
 		text-align: center;
-		font-size: ${props => props.theme.fonts.fontSizes.imageCaption};
-		line-height: ${props => props.theme.fonts.lineHeights.imageCaption};
-		color: ${props => props.theme.colors.imageCaption};
+		font-size: 15px;
+		line-height: 1.2;
+		color: ${props => props.theme.colors.gray};
 		margin-top: 10px;
 	}
 `
 
 // Layout query
 const Layout = ({ children }) => {
-	const [colorMode, setColorMode] = useColorMode()
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -208,7 +121,7 @@ const Layout = ({ children }) => {
 	
 		
 			<Container>
-				<ThemeProvider theme={theme}>
+				<ThemeProvider theme={theme} components={{ YellowBox, Container, Body, ImageWide }}>
 			<Global
 				styles={css`
 					html,
@@ -222,20 +135,15 @@ const Layout = ({ children }) => {
 					}
 				`}
 			/>
-				<MDXProvider components={{ YellowBox, Container, Body, ImageWide }}>
+				
 					<Header siteTitle={data.site.siteMetadata.title} />
 					
-					<button
-        onClick={e => {
-          setColorMode(colorMode === 'default' ? 'dark' : 'default')
-        }}>
-        Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
-      </button>
+					
 
 					<main>{children}</main>
 
 					<Footer />
-				</MDXProvider>
+				
 				</ThemeProvider>
 			</Container>
 			

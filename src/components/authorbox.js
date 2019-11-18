@@ -4,13 +4,11 @@ import Avatar from "../images/sly-avatar-main.svg"
 
 // Styled Components
 const Box = styled.div`
-	background-color: white;
-	color: ${props => props.theme.colors.bodyText};
+	background-color: ${props => props.theme.colors.authorboxBG};
 	margin-top: ${props => props.theme.tachyons.spacing.s4};
 	margin-bottom: ${props => props.theme.tachyons.spacing.s4};
 	padding: ${props => props.theme.tachyons.spacing.s4};
-	line-height: ${props => props.theme.fonts.lineHeights.bodyText};
-	border: 1px solid lightgray;
+	border: 1px solid ${props => props.theme.colors.authorboxBorder};
 	border-radius: ${props => props.theme.tachyons.borderRadius.br2};
 `
 
@@ -25,7 +23,6 @@ const AboutTheAuthor = styled.h5`
 	margin-bottom: ${props => props.theme.tachyons.spacing.s2};
 			font-size: ${props => props.theme.tachyons.size.f3};
 			letter-spacing: ${props => props.theme.tachyons.letterspacing.tight};
-			line-height: ${props => props.theme.fonts.lineHeights.bodyText};
 `
 
 const AuthorBoxImg = styled.img`
