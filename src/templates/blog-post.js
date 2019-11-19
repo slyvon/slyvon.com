@@ -5,7 +5,7 @@ import { Body } from "../components/layout"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { PageTitle } from "../components/layout"
+import { Styled } from 'theme-ui'
 import AuthorBox from "../components/authorbox"
 
 export const pageQuery = graphql`
@@ -24,7 +24,7 @@ export default function PageTemplate({ data: { mdx } }) {
 		<Layout>
 			<SEO title={mdx.frontmatter.title} />
 			<Body>
-				<PageTitle>{mdx.frontmatter.title}</PageTitle>
+				<Styled.h1>{mdx.frontmatter.title}</Styled.h1>
 				<MDXRenderer>{mdx.body}</MDXRenderer>
 
 				<AuthorBox />

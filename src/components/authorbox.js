@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Avatar from "../images/sly-avatar-main.svg"
+import theme from "../gatsby-plugin-theme-ui/index"
 
-// Styled Components
+
 const Box = styled.div`
 	background: ${props => props.theme.colors.authorboxBG};
 	margin-top: ${props => props.theme.tachyons.spacing.s4};
@@ -14,7 +15,7 @@ const Box = styled.div`
 
 const AuthorBoxContent = styled.p`
 	margin-bottom: 0px !important;
-	font-size: ${props => props.theme.tachyons.size.f5};
+	font-size: ${theme.fontSize1};
 	line-height: 1.4;
 	
 `
@@ -28,7 +29,7 @@ const AboutTheAuthor = styled.h5`
 
 const AuthorBoxImg = styled.img`
 	float: right;
-	width: 20%;
+	width: 15%;
 	margin: 0 0 0 1rem;
 	
 `

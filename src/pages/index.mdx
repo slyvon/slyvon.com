@@ -8,6 +8,7 @@ import { Body } from "../components/layout"
 import SEO from "../components/seo"
 import styled from '@emotion/styled'
 import MainAvatar from "../images/sly-avatar-main.svg"
+import { Styled } from 'theme-ui'
 
 
 export const HomeCenteredArea = styled.div`
@@ -19,21 +20,18 @@ export const HomeCenteredArea = styled.div`
   padding-bottom: ${props => props.theme.tachyons.spacing.s4};
 `;
 
-export const HomeHeadline = styled.h5`
+export const HomeHeadline = styled.h1`
       margin-top: 0;
       margin-bottom: ${props => props.theme.tachyons.spacing.s2};
       line-height: 1;
-      font-weight: ${props => props.theme.tachyons.weight.fw2};
-      font-size: ${props => props.theme.tachyons.size.f2};
-`;
-
-export const HomeBoldHeadline = styled.span`
-      font-weight: ${props => props.theme.tachyons.weight.fw7};
+      font-weight: ${props => props.theme.fontWeights.fattest};
+      font-size: ${props => props.theme.tachyons.size.f1};
+     
 `;
 
 export const SubHeadline = styled.h5`
       color: ${props => props.theme.colors.gray};
-      font-weight: ${props => props.theme.tachyons.weight.fw2};
+      font-weight: ${props => props.theme.fontWeights.thinnest};
       font-size: ${props => props.theme.tachyons.size.f4};
       margin-top: 0;
       line-height: 1;
@@ -46,7 +44,7 @@ export const SubHeadline = styled.h5`
 
 <HomeCenteredArea>
 <HomeHeadline>
-Hi, I'm <HomeBoldHeadline>Slyvon Blanco</HomeBoldHeadline></HomeHeadline>
+<span style="font-weight: 200">Hi, I'm</span> Slyvon Blanco</HomeHeadline>
 <SubHeadline>
 (You can just call me Sly)
 </SubHeadline>

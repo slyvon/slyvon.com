@@ -5,6 +5,7 @@ import { Body } from "../components/layout"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Styled } from 'theme-ui'
 
 export const pageQuery = graphql`
 	query SinglePageQuery($slug: String) {
@@ -22,6 +23,7 @@ export default function PageTemplate({ data: { mdx } }) {
 		<Layout>
 			<SEO title={mdx.frontmatter.title} />
 			<Body>
+			<Styled.h1>{mdx.frontmatter.title}</Styled.h1>
 				<MDXRenderer>{mdx.body}</MDXRenderer>
 			</Body>
 		</Layout>

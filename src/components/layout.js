@@ -11,7 +11,6 @@ import theme from "../gatsby-plugin-theme-ui/index"
 import Header from "./header"
 import Footer from "./footer"
 
-
 // Styled Components
 export const YellowBox = styled.div`
 	background: ${props => props.theme.colors.yellowboxBG};
@@ -22,16 +21,9 @@ export const YellowBox = styled.div`
 	font-size: 14px;
 `
 
-export const PageTitle = styled.h1`
-	letter-spacing: -0.015em;
-	margin-bottom: 3rem;
-	font-size: 40px;
-`
-
 export const ImageWide = styled.div`
 	width: auto;
 	height: auto;
-	
 
 	@media (min-width: 700px) {
 		max-width: calc(100% + 120px);
@@ -40,13 +32,10 @@ export const ImageWide = styled.div`
 	}
 `
 
-
-
-
 // Container CSS
 export const Container = styled.div`
 	background: ${props => props.theme.colors.background};
-	transition: all .4s ease;
+	transition: all 0.4s ease;
 	margin: 0 auto;
 	padding-top: 0;
 	display: flex;
@@ -98,7 +87,6 @@ export const Body = styled.div`
 		border: 1px solid ${props => props.theme.colors.border};
 	}
 
-
 	figcaption {
 		text-align: center;
 		font-size: 15px;
@@ -122,36 +110,33 @@ const Layout = ({ children }) => {
 
 	// Output
 	return (
-	
-		
-			<Container>
-				<ThemeProvider theme={theme} components={{ YellowBox, PageTitle, Container, Body, ImageWide }}>
-			<Global
-				styles={css`
-					html,
-					body {
-						height: 100%;
-						margin: 0;
-						font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-						-webkit-font-smoothing: antialiased;
-						text-rendering: optimizeLegibility;
-						/* The html and body elements cannot have any padding or margin. */
-					}
-				`}
-			/>
-				
-					<Header siteTitle={data.site.siteMetadata.title} />
-					
-					
+		<Container>
+			<ThemeProvider
+				theme={theme}
+				components={{ YellowBox, Container, Body, ImageWide }}
+			>
+				<Global
+					styles={css`
+						html,
+						body {
+							height: 100%;
+							margin: 0;
+							font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+								"Helvetica Neue", Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+							-webkit-font-smoothing: antialiased;
+							text-rendering: optimizeLegibility;
+							/* The html and body elements cannot have any padding or margin. */
+						}
+					`}
+				/>
 
-					<main>{children}</main>
+				<Header siteTitle={data.site.siteMetadata.title} />
 
-					<Footer />
-				
-				</ThemeProvider>
-			</Container>
-			
-		
+				<main>{children}</main>
+
+				<Footer />
+			</ThemeProvider>
+		</Container>
 	)
 }
 

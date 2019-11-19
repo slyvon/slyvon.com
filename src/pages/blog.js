@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import styled from "@emotion/styled"
-import { PageTitle, Body } from "../components/layout"
+import { Body } from "../components/layout"
 import { Styled } from 'theme-ui'
 
 // Styled Components
@@ -42,7 +42,7 @@ const BlogPage = () => {
 		<Layout>
 			<SEO title="Blog" />
 				<Body>
-				<PageTitle>Things I've Written</PageTitle>
+				<Styled.h1>Things I've Written</Styled.h1>
 			
 				{data.allMdx.edges.map(edge => {
 					return (
