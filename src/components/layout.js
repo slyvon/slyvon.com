@@ -13,6 +13,21 @@ import Footer from "./footer"
 
 
 // Styled Components
+export const YellowBox = styled.div`
+	background: ${props => props.theme.colors.yellowboxBG};
+	padding: 2rem;
+	border: 1px solid ${props => props.theme.colors.yellowboxBorder};
+	border-radius: 2px;
+	line-height: 1.5;
+	font-size: 14px;
+`
+
+export const PageTitle = styled.h1`
+	letter-spacing: -0.015em;
+	margin-bottom: 3rem;
+	font-size: 40px;
+`
+
 export const ImageWide = styled.div`
 	width: auto;
 	height: auto;
@@ -25,24 +40,13 @@ export const ImageWide = styled.div`
 	}
 `
 
-export const YellowBox = styled.div`
-	background-color: ${props => props.theme.colors.yellowboxBG};
-	padding: 2rem;
-	border: 1px solid ${props => props.theme.colors.yellowboxBorder};
-	border-radius: 2px;
-	line-height: 1.5;
-	font-size: 14px;
-`
 
-export const PageTitle = styled.h1`
-	letter-spacing: -0.015em;
-	margin-bottom: 3rem;
-	font-size: 2.5em;
-`
+
 
 // Container CSS
 export const Container = styled.div`
-	background-color: ${props => props.theme.colors.background};
+	background: ${props => props.theme.colors.background};
+	transition: all .4s ease;
 	margin: 0 auto;
 	padding-top: 0;
 	display: flex;
@@ -121,7 +125,7 @@ const Layout = ({ children }) => {
 	
 		
 			<Container>
-				<ThemeProvider theme={theme} components={{ YellowBox, Container, Body, ImageWide }}>
+				<ThemeProvider theme={theme} components={{ YellowBox, PageTitle, Container, Body, ImageWide }}>
 			<Global
 				styles={css`
 					html,

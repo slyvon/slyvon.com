@@ -4,7 +4,7 @@ import Avatar from "../images/sly-avatar-main.svg"
 
 // Styled Components
 const Box = styled.div`
-	background-color: ${props => props.theme.colors.authorboxBG};
+	background: ${props => props.theme.colors.authorboxBG};
 	margin-top: ${props => props.theme.tachyons.spacing.s4};
 	margin-bottom: ${props => props.theme.tachyons.spacing.s4};
 	padding: ${props => props.theme.tachyons.spacing.s4};
@@ -13,8 +13,9 @@ const Box = styled.div`
 `
 
 const AuthorBoxContent = styled.p`
-	font-size: 16px !important;
 	margin-bottom: 0px !important;
+	font-size: ${props => props.theme.tachyons.size.f5};
+	line-height: 1.4;
 	
 `
 

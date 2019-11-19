@@ -1,7 +1,7 @@
 const offwhite = "#f5f5f5"
 const darkest = "#1b1b1b"
 const catchyred = "#ed213a"
-const text = "rgba(0,0,0,.8)"
+const bodytext = "rgba(0,0,0,0.8)"
 const washedyellow = "#faf5d6"
 const gray9 = "#999"
 const gray7 = "#777"
@@ -13,7 +13,7 @@ export default {
     modes: {
       light: {
         background: offwhite,
-        text: text,
+        text: bodytext,
         primary: darklink,
         secondary: catchyred,
         accent: washedyellow,
@@ -45,10 +45,19 @@ export default {
 				},
 			},
   },
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 500
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
   styles: {
     p: {
       fontSize: '18px',
-      lineHeight: '1.5',
+      lineHeight: "body",
     },
     a: {
       fontWeight: "500",
@@ -69,6 +78,7 @@ export default {
       color: "border",
       borderTop: "1px solid",
       width: "100%",
+      transition: "color .4s ease"
     },
     inlineCode: {
       backgroundColor: "codeBG",
@@ -81,29 +91,32 @@ export default {
     li: {
       marginBottom: "1.3em",
       marginTop: 0,
+      fontSize: "18px",
+      lineHeight: 'body',
     },
     h1: {
-      fontSize: "2.5em",
-      fontWeight: "700",
+      fontSize: "40px",
+      fontWeight: "heading",
+      lineHeight: "heading",
       letterSpacing: "-.05em",
     },
     h2: {
-      fontSize: "1.62em",
-      fontWeight: "700",
-      lineHeight: "1.25",
+      fontSize: "32px",
+      fontWeight: "heading",
+      lineHeight: "heading",
       letterSpacing: "-.05em",
     },
     h3: {
-      fontSize: "1.375em",
-      fontWeight: "600",
-      lineHeight: "1.25",
+      fontSize: "24px",
+      fontWeight: "heading",
+      lineHeight: "heading",
       color: "darken",
       letterSpacing: "-.05em",
     },
     h4: {
-      fontSize: "1.2em",
-      fontWeight: "600",
-      lineHeight: "1.25",
+      fontSize: "20px",
+      fontWeight: "heading",
+      lineHeight: "heading",
       color: "darken",
       letterSpacing: "-.05em",
     },
