@@ -33,7 +33,7 @@ export const Container = styled.div`
 
 export const Body = styled.div`
 	margin: 0 auto;
-	max-width: ${props => (props.wide ? "64rem" : "580px")};
+	max-width: ${props => (props.wide ? "64rem" : "555px")};
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;

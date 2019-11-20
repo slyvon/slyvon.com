@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		title: `Slyvon Blanco`,
-		description: `My home (and playground) on the internet.`,
+		description: `Independent strategist, consultant, and designer.`,
 		author: `Slyvon Blanco`,
 	},
 	plugins: [

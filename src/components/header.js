@@ -63,7 +63,7 @@ const NavBar = styled.header`
 	box-sizing: border-box;
 	display: table;
 	width: 100%;
-	max-width: ${props => props.theme.tachyons.maxwidth.mw8};
+	max-width: ${props => props.theme.tachyons.maxwidth.mw9};
 	margin-right: auto;
 	margin-left: auto;
 	padding-top: ${props => props.theme.tachyons.spacing.s2};

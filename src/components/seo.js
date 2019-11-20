@@ -22,9 +22,11 @@ function SEO({ description, lang, meta, title }) {
 
 	return (
 		<Helmet
+			defer={false}
 			htmlAttributes={{
 				lang,
 			}}
+			defaultTitle={`${site.siteMetadata.title} | ${site.siteMetadata.description}`}
 			title={title}
 			titleTemplate={`%s | ${site.siteMetadata.title}`}
 			meta={[
