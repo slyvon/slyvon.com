@@ -92,6 +92,12 @@ module.exports = {
 							], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
 						},
 					},
+					{
+            resolve: 'gatsby-remark-instagram-embed',
+            options: {
+            },
+					},
+					`gatsby-remark-responsive-iframe`,
 				],
 			},
 		},

@@ -7,30 +7,12 @@ import { Global, css } from "@emotion/core"
 
 // Components and styles
 import { ThemeProvider } from "theme-ui"
+import { HomeHeadline, SubHeadline, ProjectTitle, YellowBox, ImageWide, WorkPageHeader, BadgeText, NoMarginHeadline } from "./components"
 import theme from "../gatsby-plugin-theme-ui/index"
 import Header from "./header"
 import Footer from "./footer"
+import AuthorBox from "./authorbox"
 
-// Styled Components
-export const YellowBox = styled.div`
-	background: ${props => props.theme.colors.yellowboxBG};
-	padding: 2rem;
-	border: 1px solid ${props => props.theme.colors.yellowboxBorder};
-	border-radius: 2px;
-	line-height: 1.5;
-	font-size: 14px;
-`
-
-export const ImageWide = styled.div`
-	width: auto;
-	height: auto;
-
-	@media (min-width: 700px) {
-		max-width: calc(100% + 120px);
-		margin-left: -60px;
-		margin-right: -60px;
-	}
-`
 
 // Container CSS
 export const Container = styled.div`
@@ -51,7 +33,7 @@ export const Container = styled.div`
 
 export const Body = styled.div`
 	margin: 0 auto;
-	max-width: ${props => (props.wide ? "740px" : "580px")};
+	max-width: ${props => (props.wide ? "64rem" : "580px")};
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -83,8 +65,9 @@ export const Body = styled.div`
 	}
 
 	figure img {
-		border-radius: 3px;
 		border: 1px solid ${props => props.theme.colors.border};
+		border-radius: 3px;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
 	}
 
 	figcaption {
@@ -92,7 +75,11 @@ export const Body = styled.div`
 		font-size: 15px;
 		line-height: 1.2;
 		color: ${props => props.theme.colors.gray};
-		margin-top: 10px;
+		margin-top: 12px;
+	}
+
+	iframe {
+		border: 1px solid ${props => props.theme.colors.border};
 	}
 `
 
@@ -113,7 +100,7 @@ const Layout = ({ children }) => {
 		<Container>
 			<ThemeProvider
 				theme={theme}
-				components={{ YellowBox, Container, Body, ImageWide }}
+				components={{ AuthorBox, YellowBox, Container, Body, ImageWide, HomeHeadline, SubHeadline, ProjectTitle, WorkPageHeader, BadgeText, NoMarginHeadline }}
 			>
 				<Global
 					styles={css`

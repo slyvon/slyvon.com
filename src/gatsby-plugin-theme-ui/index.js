@@ -1,11 +1,11 @@
 const offwhite = "#f5f5f5"
-const darkest = "#1b1b1b"
+const darkest = "#222"
 const catchyred = "#ed213a"
-const bodytext = "rgba(0,0,0,0.8)"
+const bodytext = "#333"
 const washedyellow = "#faf5d6"
 const gray9 = "#999"
 const gray7 = "#777"
-const darklink = "#111"
+const darklink = "#2d2d2d"
 
 export default {
 	initialColorModeName: "light",
@@ -41,7 +41,7 @@ export default {
 				yellowboxBG: "#333",
 				yellowboxBorder: darklink,
 				codeBG: gray7,
-				border: "#333",
+				border: darklink,
 			},
 		},
 	},
@@ -60,7 +60,13 @@ export default {
 		body: "normal",
 		heading: "-.05em",
 	},
-	fontSizes: [12, 14, 18, 22.5, 28.13, 35.16, 43.95, 55, 68],
+	fontSizes: [12, 14, 18, 22.5, 28, 35.16, 43.95, 55, 68],
+	text: {
+		noMarginHeading: {
+			marginBottom: 0,
+			marginTop: 0,
+		},
+	},
 	styles: {
 		p: {
 			fontSize: 2,
@@ -94,14 +100,14 @@ export default {
 		},
 		h3: {
 			fontSize: 4,
-			color: "darken",
+			color: "#444",
 			fontWeight: "heading",
 			lineHeight: "heading",
 			letterSpacing: "heading",
 		},
 		h4: {
 			fontSize: 3,
-			color: "darken",
+			color: "#555",
 			fontWeight: "heading",
 			lineHeight: "heading",
 			letterSpacing: "heading",

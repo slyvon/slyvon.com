@@ -71,7 +71,7 @@ const NavBar = styled.header`
 	margin-bottom: 4rem;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
-	border-color: rgba(0, 0, 0, 0.05);
+	border-color: ${props => props.theme.colors.border};
 `
 
 const Brand = styled.div`

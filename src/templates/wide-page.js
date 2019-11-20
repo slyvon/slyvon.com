@@ -22,8 +22,7 @@ export default function WidePageTemplate({ data: { mdx } }) {
 	return (
 		<Layout>
 			<SEO title={mdx.frontmatter.title} />
-			<Body>
-			<Styled.h1>{mdx.frontmatter.title}</Styled.h1>
+			<Body wide>
 				<MDXRenderer>{mdx.body}</MDXRenderer>
 			</Body>
 		</Layout>
