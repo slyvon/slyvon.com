@@ -40,7 +40,7 @@ module.exports = {
 			options: {
 				useMozJpeg: false,
 				stripMetadata: true,
-				defaultQuality: 75,
+				defaultQuality: 85,
 			},
 		},
 		`gatsby-transformer-sharp`,
@@ -105,7 +105,7 @@ module.exports = {
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: `Slyvon Blanco`,
-				short_name: `@slyvon`,
+				short_name: `Slyvon.com`,
 				start_url: `/`,
 				background_color: `#f5f5f5`,
 				theme_color: `#663399`,
@@ -113,8 +113,6 @@ module.exports = {
 				icon: `src/images/favicon.png`, // This path is relative to the root of the site.
 			},
 		},
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
 		`gatsby-plugin-offline`,
 	],
 }
