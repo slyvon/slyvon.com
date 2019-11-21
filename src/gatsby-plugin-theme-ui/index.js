@@ -100,7 +100,7 @@ export default {
 		},
 		h3: {
 			fontSize: 4,
-			color: "#444",
+			color: "darken",
 			fontWeight: "heading",
 			lineHeight: "heading",
 			letterSpacing: "heading",

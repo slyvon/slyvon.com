@@ -1,17 +1,56 @@
 ---
-title: "Typography & Design"
+title: "Typography & Design (H1)"
 date: 2019-11-19T00:25:54-07:00
 type: "page"
 ---
 
-# Headline 1
+This is an example paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus elementum sagittis vitae et. Quis enim lobortis scelerisque fermentum dui faucibus. Dictum non consectetur a erat. 
+
+Massa sapien faucibus et molestie ac feugiat sed lectus. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis.
+
+---
+
 ## Headline 2
 ### Headline 3
 #### Headline 4
 ##### Headline 5
 ###### Headline 6
 
+---
+
+## Text Formatting
+
+**This is bolded text.**
+
+_This is italic text._
+
+~~Strikethrough~~
+
+`This is an inline code`
+
+[This is a linked text.](/type)
+
+> This is a blockquote...
+>> ...that can be nested using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+
+This is a footnote link [^1] .
+
+This is another footnote link [^2] .
+
+[^1]: Footnote **can have markup** and multiple paragraphs.
+
+[^2]: Footnote text.
+
+---
+
 ## Custom Components
+
+<BadgeText>This is a badge</BadgeText>
+
+<NoMarginHeadline>This is a no-margin headline</NoMarginHeadline>
+
+<SubHeadline>This is a subheadline</SubHeadline>
 
 <YellowBox>
   This is a Yellow Box.
@@ -21,46 +60,17 @@ type: "page"
   This is an Author Box
 </AuthorBox>
 
-## Emphasis
+<ImageWide>
 
-**This is bold text**
+![This is a negative-margin image with a caption.](../src/images/gatsby-astronaut.png)
 
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-~~Strikethrough~~
-
-## Images (w/ Caption)
-
-![Minion](../src/images/gatsby-astronaut.png)
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-## Blockquotes
-
-
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
-
-## Horizontal Rules
-
-___
+</ImageWide>
 
 ---
 
-***
-
 ## Lists
 
-Unordered
+#### Unordered
 
 + Create a list by starting a line with `+`, `-`, or `*`
 + Sub-lists are made by indenting 2 spaces:
@@ -70,7 +80,7 @@ Unordered
     - Nulla volutpat aliquam velit
 + Very easy!
 
-Ordered
+#### Ordered
 
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
@@ -85,53 +95,7 @@ Start numbering with offset:
 57. foo
 1. bar
 
-
-
-
-## Typographic replacements
-
-Enable typographer option to see result.
-
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
-
-test.. test... test..... test?..... test!....
-
-!!!!!! ???? ,,  -- ---
-
-"Smartypants, double quotes" and 'single quotes'
-
-
-
-
-
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
+---
 
 ## Tables
 
@@ -151,29 +115,4 @@ Right aligned columns
 
 
 
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
 
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup** and multiple paragraphs.
-
-[^second]: Footnote text.
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O

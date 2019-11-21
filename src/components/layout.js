@@ -7,7 +7,7 @@ import { Global, css } from "@emotion/core"
 
 // Components and styles
 import { ThemeProvider } from "theme-ui"
-import { HomeHeadline, SubHeadline, ProjectTitle, YellowBox, ImageWide, WorkPageHeader, BadgeText, NoMarginHeadline } from "./components"
+import { HomeHeadline, SubHeadline, ProjectTitle, YellowBox, ImageWide, BadgeText, NoMarginHeadline } from "./components"
 import theme from "../gatsby-plugin-theme-ui/index"
 import Header from "./header"
 import Footer from "./footer"
@@ -100,7 +100,7 @@ const Layout = ({ children }) => {
 		<Container>
 			<ThemeProvider
 				theme={theme}
-				components={{ AuthorBox, YellowBox, Container, Body, ImageWide, HomeHeadline, SubHeadline, ProjectTitle, WorkPageHeader, BadgeText, NoMarginHeadline }}
+				components={{ AuthorBox, YellowBox, Container, Body, ImageWide, HomeHeadline, SubHeadline, ProjectTitle, BadgeText, NoMarginHeadline }}
 			>
 				<Global
 					styles={css`

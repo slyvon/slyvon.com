@@ -11,10 +11,6 @@ export const HomeHeadline = styled.h1`
      
 `
 
-export const WorkPageHeader = styled.div`
-  padding-bottom: 20px;
-`;
-
 export const ProjectTitle = styled.h2`
       color: ${props => props.theme.colors.darken};
       font-weight: ${props => props.theme.fontWeights.fattest};
@@ -23,14 +19,13 @@ export const ProjectTitle = styled.h2`
       margin-top: 5px;
       margin-bottom: 10px;
       line-height: 1;
-     
 `
 
 export const SubHeadline = styled.h5`
       color: ${props => props.theme.colors.gray};
       font-weight: ${props => props.theme.fontWeights.thinnest};
       font-size: ${props => props.theme.tachyons.size.f4};
-      margin-top: 0;
+      margin-top: 5px;
       line-height: 1;
 `
 
@@ -55,7 +50,7 @@ export const YellowBox = styled.div`
 `
 
 export const BadgeText = styled.span`
-	box-sizing: border-box;
+    box-sizing: border-box;
     max-width: fit-content;
     display: inline-block;
     vertical-align: baseline;
@@ -66,7 +61,7 @@ export const BadgeText = styled.span`
     color: white;
     background-color: #333;
     border-radius: 2px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     margin-top: 20px;
     text-transform: uppercase;
 `

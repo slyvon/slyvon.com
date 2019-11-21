@@ -16,21 +16,27 @@ export const ProjectContainer = styled.div`
       margin-bottom: 80px;
 `
 
+export const ProjectHead = props => (
+  <>
+    <BadgeText>{props.badge}</BadgeText>
+    <ProjectTitle>{props.project}</ProjectTitle>
+    <SubHeadline>{props.subhead}</SubHeadline>
+  </>
+)
+
+
+
 As a freelance consultant, I've been lucky to work with other entrepeneurs and take part in many exciting projects. From designing and developing websites, to creating email marketing campaigns and running product launches. Here are some of the things I've worked on over the last few years.
 
 ---
 
+<!-- Brighter -->
 <ProjectContainer>
-<BadgeText>Fall 2019</BadgeText>
-<ProjectTitle>
-    Brighter
-</ProjectTitle>
-<SubHeadline sx={{ 
-  marginTop: 0, 
-  marginBottom: 20, 
-  }}>
-    Design, Development, and Copy
-</SubHeadline>
+<ProjectHead
+  badge="Fall 2019"
+  project="Brighter"
+  subhead="Design, Development, and Copy"
+/>
 
 My most recent web design and development work. Brighter is a video production agency based in LA that has created content for companies such as Disney, KIA, Nintendo, and Lands' End. [Click here](https://abrightercompany.com/) to check out the site.
 
@@ -45,16 +51,11 @@ My most recent web design and development work. Brighter is a video production a
 
 <!-- SimplifiedFitness -->
 <ProjectContainer>
-<BadgeText>Est. 2011, updated Fall 2019</BadgeText>
-<ProjectTitle>
-    SimplifiedFitness.io
-</ProjectTitle>
-<SubHeadline sx={{ 
-  marginTop: 0, 
-  marginBottom: 20, 
-  }}>
-    Design, Development, and Copy
-</SubHeadline>
+<ProjectHead
+  badge="Est. 2011, updated Fall 2019"
+  project="SimplifiedFitness.io"
+  subhead="Design, Development, and Copy"
+/>
 
 Originally Von Blanco Fitness, SimplifiedFitness.io is my fitness website that has been rebranded and restructured with the sole purpose of providing educational content. [Click here](https://simplifiedfitness.io/) to check out the site.
 
@@ -70,16 +71,11 @@ Originally Von Blanco Fitness, SimplifiedFitness.io is my fitness website that h
 
 <!-- JCDFitness -->
 <ProjectContainer>
-<BadgeText>Summer 2019</BadgeText>
-<ProjectTitle>
-    JCD Fitness
-</ProjectTitle>
-<SubHeadline sx={{ 
-  marginTop: 0, 
-  marginBottom: 20, 
-  }}>
-    Design, Development, and Copy
-</SubHeadline>
+<ProjectHead
+  badge="Summer 2019"
+  project="JCD Fitness"
+  subhead="Design, Development, and Copy"
+/>
 
 Redesigned the website of JC Deen, a writer and editor in the fitness industry. [Click here](https://jcdfitness.com/) to check out the site.
 
@@ -94,16 +90,11 @@ Redesigned the website of JC Deen, a writer and editor in the fitness industry. 
 
 <!-- Design.slyvon.com -->
 <ProjectContainer>
-<BadgeText>Summer 2019</BadgeText>
-<ProjectTitle>
-    Design.slyvon.com
-</ProjectTitle>
-<SubHeadline sx={{ 
-  marginTop: 0, 
-  marginBottom: 20, 
-  }}>
-    Design, Development, and Copy
-</SubHeadline>
+<ProjectHead
+  badge="Summer 2019"
+  project="Design.slyvon.com"
+  subhead="Design, Development, and Copy"
+/>
 
 My web-design service sales page. [Click here](https://design.slyvon.com/) to check out the site.
 
@@ -119,16 +110,11 @@ My web-design service sales page. [Click here](https://design.slyvon.com/) to ch
 
 <!-- BK -->
 <ProjectContainer>
-<BadgeText>Fall 2017</BadgeText>
-<ProjectTitle>
-    Bryan Krahn
-</ProjectTitle>
-<SubHeadline sx={{ 
-  marginTop: 0, 
-  marginBottom: 20, 
-  }}>
-    Design, Development, Copy, Email Marketing, and Content Strategy
-</SubHeadline>
+<ProjectHead
+  badge="Fall 2017"
+  project="Bryan Krahn"
+  subhead="Design, Development, Copy, Email Marketing, and Content Strategy"
+/>
 
 Redesigned the website of Bryan Krahn, a writer and editor in the fitness industry. [Click here](https://bryankrahn.com/) to check out the site.
 
@@ -143,16 +129,11 @@ Redesigned the website of Bryan Krahn, a writer and editor in the fitness indust
 
 <!-- Physiqonomics -->
 <ProjectContainer>
-<BadgeText>Fall 2017</BadgeText>
-<ProjectTitle>
-    Physiqonomics
-</ProjectTitle>
-<SubHeadline sx={{ 
-  marginTop: 0, 
-  marginBottom: 20, 
-  }}>
-    Design, Development, and Copy
-</SubHeadline>
+<ProjectHead
+  badge="Fall 2017"
+  project="Physiqonomics"
+  subhead="Design, Development, and Copy"
+/>
 
 Redesigned the website of Adam Ali, a writer in the fitness industry. [Click here](https://physiqonomics.com/) to check out the site.
 
