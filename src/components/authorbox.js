@@ -27,7 +27,7 @@ const AboutTheAuthor = styled.h5`
 
 const AuthorBoxImg = styled.img`
 	float: right;
-	width: 15%;
+	width: 14%;
 	border-radius: 100%;
 	margin: 0 0 0 1rem;
 `
