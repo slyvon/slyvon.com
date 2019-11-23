@@ -5,22 +5,6 @@ module.exports = {
 		author: `Slyvon Blanco`,
 	},
 	plugins: [
-		`gatsby-plugin-react-helmet`,
-		`gatsby-plugin-catch-links`,
-		`gatsby-plugin-sass`,
-		'gatsby-plugin-theme-ui',
-		{
-			resolve: "gatsby-plugin-netlify-cache",
-			options: {
-				cachePublic: false
-			}
-		},
-		{
-			resolve: `gatsby-plugin-emotion`,
-			options: {
-				// Accepts all options defined by `babel-plugin-emotion` plugin.
-			},
-		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -44,6 +28,29 @@ module.exports = {
 			},
 		},
 		`gatsby-transformer-sharp`,
+		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-catch-links`,
+		`gatsby-plugin-sass`,
+		'gatsby-plugin-theme-ui',
+		{
+      resolve: 'gatsby-theme-style-guide',
+      options: {
+        // sets path for generated page
+        basePath: '/styles',
+      }
+    },
+		{
+			resolve: "gatsby-plugin-netlify-cache",
+			options: {
+				cachePublic: false
+			}
+		},
+		{
+			resolve: `gatsby-plugin-emotion`,
+			options: {
+				// Accepts all options defined by `babel-plugin-emotion` plugin.
+			},
+		},
 		{
 			resolve: `gatsby-plugin-mdx`,
 			options: {
@@ -54,9 +61,10 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-images`,
 						options: {
-							maxWidth: 700,
+							maxWidth: 675,
 							linkImagesToOriginal: false,
 							showCaptions: true,
+							quality: 95,
 						},
 					},
 				],
@@ -73,9 +81,10 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-images`,
 						options: {
-							maxWidth: 700,
+							maxWidth: 675,
 							linkImagesToOriginal: false,
 							showCaptions: true,
+							quality: 95,
 						},
 					},
 					{

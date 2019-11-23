@@ -20,10 +20,9 @@ export default {
 				muted: gray9,
 				gray: gray7,
 				darken: darkest,
-				authorboxBG: "white",
-				authorboxBorder: "#ddd",
-				yellowboxBG: washedyellow,
-				yellowboxBorder: "#ddd280",
+				EndOfPostBoxBG: "white",
+				EndOfPostBoxBorder: "#ddd",
+				infoBoxBorder: "#ddd280",
 				codeBG: "#ddd",
 				border: "#e6e6e6",
 			},
@@ -36,10 +35,9 @@ export default {
 				muted: gray9,
 				gray: gray7,
 				darken: "white",
-				authorboxBG: "#333",
-				authorboxBorder: darklink,
-				yellowboxBG: "#333",
-				yellowboxBorder: darklink,
+				EndOfPostBoxBG: "#333",
+				EndOfPostBoxBorder: darklink,
+				infoBoxBorder: "rgba(0,0,0,0.05) 0 0 0 1px",
 				codeBG: gray7,
 				border: darklink,
 			},
@@ -67,10 +65,23 @@ export default {
 			marginTop: 0,
 		},
 	},
+	InfoBoxes: {
+		yellow: {
+			color: "text",
+			background: "washedyellow"
+		},
+		red: {
+			color: "text",
+			background: "#000"
+		}
+	},
 	styles: {
 		p: {
 			fontSize: 2,
 			lineHeight: "body",
+		},
+		img: {
+			WebkitUserDrag: "none"
 		},
 		a: {
 			fontWeight: "500",

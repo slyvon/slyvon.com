@@ -4,8 +4,7 @@ date: 2019-10-04T00:25:54-07:00
 type: "page"
 ---
 
-import { Body } from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 import styled from '@emotion/styled'
 import MainAvatar from "../images/sly-avatar-main.svg"
 import { Styled } from 'theme-ui'
@@ -19,6 +18,17 @@ export const HomeCenteredArea = styled.div`
   padding-top: ${props => props.theme.tachyons.spacing.s4};
   padding-bottom: ${props => props.theme.tachyons.spacing.s4};
 `;
+
+export const HomeHeadline = styled.h1`
+      color: ${props => props.theme.colors.darken};
+      font-weight: ${props => props.theme.fontWeights.fattest};
+      font-size: ${props => props.theme.tachyons.size.f1};
+      letter-spacing: ${props => props.theme.letterSpacings.heading};
+      margin-top: 0;
+      margin-bottom: ${props => props.theme.tachyons.spacing.s2};
+      line-height: 1;
+     
+`
 
 <SEO />
 

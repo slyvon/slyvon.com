@@ -116,7 +116,7 @@ const LinkNavItem = styled(Link)`
 const DarkModeIcon = styled.button`
 	opacity: 0.5;
 	cursor: pointer;
-	outline: none;
+	outline: transparent;
 	position: relative;
 	border-radius: 5px;
 	display: inline-block;

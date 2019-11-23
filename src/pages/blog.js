@@ -2,10 +2,10 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 
 import styled from "@emotion/styled"
-import { Body } from "../components/layout"
+import Body from "../components/Body"
 import { Styled } from 'theme-ui'
 
 // Styled Components
@@ -43,7 +43,6 @@ const BlogPage = () => {
 			<SEO title="Blog" />
 				<Body>
 				<Styled.h1>Things I've Written</Styled.h1>
-			
 				{data.allMdx.edges.map(edge => {
 					return (
 						<BlogList>
