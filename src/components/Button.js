@@ -18,7 +18,6 @@ const Button = styled.button`
   align-items: flex-start;
   text-shadow: 0 1px 0 rgba(0,0,0,0.03);
   transition: color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),box-shadow 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),background-color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),border-color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),-webkit-box-shadow 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),-webkit-transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
     :hover {
       -webkit-transform: translateY(-1.5px);
     transform: translateY(-1.5px);

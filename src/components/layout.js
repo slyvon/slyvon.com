@@ -10,9 +10,6 @@ import BadgeText from "./Badge"
 import Body from "./Body"
 import EndOfPostBox from "./EndOfPostBox"
 import ImageWide from "./ImageWide"
-import NoMarginHeadline from "./NoMarginHeadline"
-import ProjectTitle from "./ProjectTitle"
-import SubHeadline from "./SubHeadline"
 import InfoBox from "./InfoBox"
 import Button from "./Button"
 import theme from "../gatsby-plugin-theme-ui/index"
@@ -41,7 +38,14 @@ const Layout = ({ children }) => {
 		<Container>
 			<ThemeProvider
 				theme={theme}
-				components={{ BadgeText, Body, EndOfPostBox, ImageWide, NoMarginHeadline, ProjectTitle, SubHeadline, InfoBox, Button }}
+				components={{ 
+					BadgeText, 
+					Body, 
+					Button,
+					EndOfPostBox, 
+					ImageWide, 
+					InfoBox, 
+					 }}
 			>
 				<Global
 					styles={css`

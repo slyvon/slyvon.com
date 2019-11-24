@@ -19,8 +19,12 @@ export const ProjectContainer = styled.div`
 export const ProjectHead = props => (
   <>
     <BadgeText>{props.badge}</BadgeText>
-    <ProjectTitle>{props.project}</ProjectTitle>
-    <SubHeadline>{props.subhead}</SubHeadline>
+    <Styled.h2 style="margin-top: 5px; margin-bottom: 10px">
+        {props.project}
+    </Styled.h2>
+    <Styled.h4 style="margin-top: 0; font-weight: 200">
+        {props.subhead}
+    </Styled.h4>
   </>
 )
 
