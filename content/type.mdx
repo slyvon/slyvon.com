@@ -1,8 +1,77 @@
 ---
-title: "Typography & Design (H1)"
+title: "Slyvon.com's Design System"
 date: 2019-11-19T00:25:54-07:00
-type: "page"
+type: "wide"
 ---
+
+import React from 'react'
+import { Grid } from '@theme-ui/components'
+import {
+  TypeScale,
+  TypeStyle,
+  ColorPalette,
+} from '@theme-ui/style-guide'
+
+
+
+# Slyvon.com's Design System
+
+## Colors
+
+<ColorPalette />
+
+---
+
+## Font Sizes
+
+<TypeScale />
+
+## Font Weights
+
+<Grid
+  gap={2}
+  columns={[ 5 ]}>
+  <Box bg='background'>
+    <TypeStyle fontWeight='thinnest'>
+thinnest<br />
+(200)
+</TypeStyle>
+  </Box>
+  <Box bg='background'>
+    <TypeStyle fontWeight='body'>
+body<br />
+(400)
+  </TypeStyle>
+  </Box>
+  <Box bg='background'>
+    <TypeStyle fontWeight='bold'>
+bold<br />
+(500)
+  </TypeStyle>
+  </Box>
+  <Box bg='background'>
+    <TypeStyle fontWeight='heading'>
+  heading<br />
+  (800)
+  </TypeStyle>
+  </Box>
+  <Box bg='background'>
+    <TypeStyle fontWeight='fattest'>
+  fattest
+  <br />(900)
+  </TypeStyle>
+  </Box>
+</Grid>
+
+
+
+
+
+
+
+---
+
+<Body>
 
 This is an example paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus elementum sagittis vitae et. Quis enim lobortis scelerisque fermentum dui faucibus. Dictum non consectetur a erat. 
 
@@ -115,6 +184,4 @@ Right aligned columns
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
-
-
-
+</Body>

@@ -1,4 +1,6 @@
 const offwhite = "#f5f5f5"
+const darkmodeBG = "#16161a"
+const darkmodeBodyText = "#94a1b2"
 const darkest = "#222"
 const catchyred = "#ed213a"
 const bodytext = "#333"
@@ -27,8 +29,8 @@ export default {
 				border: "#e6e6e6",
 			},
 			dark: {
-				background: darkest,
-				text: offwhite,
+				background: darkmodeBG,
+				text: darkmodeBodyText,
 				primary: offwhite,
 				secondary: catchyred,
 				accent: "#333",
