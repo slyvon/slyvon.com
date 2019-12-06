@@ -1,8 +1,10 @@
 ---
-title: "Typography & Design (H1)"
+title: "This Site's Design System"
 date: 2019-11-19T00:25:54-07:00
 type: "page"
 ---
+
+import React from 'react'
 
 This is an example paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus elementum sagittis vitae et. Quis enim lobortis scelerisque fermentum dui faucibus. Dictum non consectetur a erat. 
 
@@ -46,19 +48,22 @@ This is another footnote link [^2] .
 
 ## Custom Components
 
-<BadgeText>This is a badge</BadgeText>
+<Badge>Filled Badge</Badge> 
+<Badge outline style="margin-bottom: 25px">Outline Badge</Badge>
 
-<NoMarginHeadline>This is a no-margin headline</NoMarginHeadline>
+<InfoBox>
+  This is an "info" box.
+</InfoBox>
 
-<SubHeadline>This is a subheadline</SubHeadline>
-
-<YellowBox>
-  This is a Yellow Box.
-</YellowBox>
-
-<AuthorBox>
+<EndOfPostBox>
   This is an Author Box
-</AuthorBox>
+</EndOfPostBox>
+
+<div>
+
+<Button>Primary</Button><Button outline>Secondary</Button>
+
+</div>
 
 <ImageWide>
 
@@ -112,7 +117,3 @@ Right aligned columns
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
-
-
-
-

@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		title: `Slyvon Blanco`,
-		description: `Independent strategist, consultant, and designer.`,
+		description: `My home on the internet.`,
 		author: `Slyvon Blanco`,
 	},
 	plugins: [
@@ -40,7 +40,7 @@ module.exports = {
 			options: {
 				useMozJpeg: false,
 				stripMetadata: true,
-				defaultQuality: 85,
+				defaultQuality: 75,
 			},
 		},
 		`gatsby-transformer-sharp`,
@@ -92,12 +92,6 @@ module.exports = {
 							], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
 						},
 					},
-					{
-            resolve: 'gatsby-remark-instagram-embed',
-            options: {
-            },
-					},
-					`gatsby-remark-responsive-iframe`,
 				],
 			},
 		},
@@ -105,7 +99,7 @@ module.exports = {
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: `Slyvon Blanco`,
-				short_name: `Slyvon.com`,
+				short_name: `@slyvon`,
 				start_url: `/`,
 				background_color: `#f5f5f5`,
 				theme_color: `#663399`,
@@ -113,6 +107,8 @@ module.exports = {
 				icon: `src/images/favicon.png`, // This path is relative to the root of the site.
 			},
 		},
+		// this (optional) plugin enables Progressive Web App + Offline functionality
+		// To learn more, visit: https://gatsby.dev/offline
 		`gatsby-plugin-offline`,
 	],
 }

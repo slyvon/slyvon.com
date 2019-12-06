@@ -6,22 +6,47 @@ type: "page"
 
 import styled from "@emotion/styled"
 
+export const BadgeList = styled.ul`
+        display: flex;
+        flex-wrap: wrap;
+        list-style: outside none none;
+        margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+`
+
 export const PortfolioImage = styled.p`
       box-shadow: rgba(0, 0, 0, 0.25) 0px 12px 38px;
       padding: 0;
       margin-top: 50px;
 `
 
+export const LinkIcon = styled.a`
+    display: inline-flex;
+        padding-left: 7px;
+        padding-bottom: 15px;
+    vertical-align: super;
+`
+
 export const ProjectContainer = styled.div`
-      margin-bottom: 80px;
+      margin-bottom: 130px;
+      margin-top: 20px;
 `
 
 export const ProjectHead = props => (
-  <>
-    <BadgeText>{props.badge}</BadgeText>
-    <ProjectTitle>{props.project}</ProjectTitle>
-    <SubHeadline>{props.subhead}</SubHeadline>
-  </>
+  <div>
+    <Styled.h4 style="font-size: 14px; margin-top: 0; margin-bottom: 0px; font-weight: 300;">
+        {props.subhead}
+    </Styled.h4>
+    <Styled.h2 style="margin-top: 5px; margin-bottom: 5px; display: inline-flex;">
+        {props.project}
+    </Styled.h2>
+      <LinkIcon href={props.link} target="_blank" rel="noopener">
+      <span><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M5.982 1.042h2.232L3.898 5.358l.745.744 4.316-4.316v2.233h1.04V.52A.508.508 0 0 0 9.48 0H5.982v1.042zM9 9H1V1h2.978V0H.51A.51.51 0 0 0 0 .51v8.98c0 .282.228.51.51.51h8.98a.51.51 0 0 0 .51-.51V6.026H9V9z" fill="#999"></path></svg></span>
+    </LinkIcon>
+  </div>
 )
 
 
@@ -33,12 +58,18 @@ As a freelance consultant, I've been lucky to work with other entrepeneurs and t
 <!-- Brighter -->
 <ProjectContainer>
 <ProjectHead
-  badge="Fall 2019"
   project="Brighter"
-  subhead="Design, Development, and Copy"
+  subhead="Fall 2019"
+  link="https://abrightercompany.com/"
 />
 
-My most recent web design and development work. Brighter is a video production agency based in LA that has created content for companies such as Disney, KIA, Nintendo, and Lands' End. [Click here](https://abrightercompany.com/) to check out the site.
+My most recent web design and development work. Brighter is a video production agency based in LA that has created content for companies such as Disney, KIA, Nintendo, and Lands' End.
+
+<BadgeList>
+  <Badge outline>Copywriting</Badge>
+  <Badge outline>Design</Badge>
+  <Badge outline>Development</Badge>
+</BadgeList>
 
 <ImageWide>
 <PortfolioImage>
@@ -52,12 +83,19 @@ My most recent web design and development work. Brighter is a video production a
 <!-- SimplifiedFitness -->
 <ProjectContainer>
 <ProjectHead
-  badge="Est. 2011, updated Fall 2019"
   project="SimplifiedFitness.io"
-  subhead="Design, Development, and Copy"
+  subhead="Est. 2011, Rebranded 2019"
+  link="https://simplifiedfitness.io/"
 />
 
-Originally Von Blanco Fitness, SimplifiedFitness.io is my fitness website that has been rebranded and restructured with the sole purpose of providing educational content. [Click here](https://simplifiedfitness.io/) to check out the site.
+Originally Von Blanco Fitness, SimplifiedFitness.io is my fitness website that has been rebranded and restructured with the sole purpose of providing educational content.
+
+<BadgeList>
+  <Badge outline>Content Strategy</Badge>
+  <Badge outline>Copywriting</Badge>
+  <Badge outline>Design</Badge>
+  <Badge outline>Development</Badge>
+</BadgeList>
 
 <ImageWide>
 <PortfolioImage>
@@ -72,12 +110,19 @@ Originally Von Blanco Fitness, SimplifiedFitness.io is my fitness website that h
 <!-- JCDFitness -->
 <ProjectContainer>
 <ProjectHead
-  badge="Summer 2019"
   project="JCD Fitness"
-  subhead="Design, Development, and Copy"
+  subhead="Summer 2019"
+  link="https://jcdfitness.com/"
 />
 
-Redesigned the website of JC Deen, a writer and editor in the fitness industry. [Click here](https://jcdfitness.com/) to check out the site.
+Redesigned the website of JC Deen, a writer and editor in the fitness industry.
+
+<BadgeList>
+  <Badge outline>Conversion Optimization</Badge>
+  <Badge outline>Copywriting</Badge>
+  <Badge outline>Design</Badge>
+  <Badge outline>Development</Badge>
+</BadgeList>
 
 <ImageWide>
 <PortfolioImage>
@@ -91,12 +136,18 @@ Redesigned the website of JC Deen, a writer and editor in the fitness industry. 
 <!-- Design.slyvon.com -->
 <ProjectContainer>
 <ProjectHead
-  badge="Summer 2019"
   project="Design.slyvon.com"
-  subhead="Design, Development, and Copy"
+  subhead="Summer 2019"
+  link="https://design.slyvon.com/"
 />
 
-My web-design service sales page. [Click here](https://design.slyvon.com/) to check out the site.
+My web-design service sales page.
+
+<BadgeList>
+  <Badge outline>Copywriting</Badge>
+  <Badge outline>Design</Badge>
+  <Badge outline>Development</Badge>
+</BadgeList>
 
 <ImageWide>
 <PortfolioImage>
@@ -111,12 +162,22 @@ My web-design service sales page. [Click here](https://design.slyvon.com/) to ch
 <!-- BK -->
 <ProjectContainer>
 <ProjectHead
-  badge="Fall 2017"
   project="Bryan Krahn"
-  subhead="Design, Development, Copy, Email Marketing, and Content Strategy"
+  subhead="Fall 2017"
+  link="https://bryankrahn.com/"
 />
 
-Redesigned the website of Bryan Krahn, a writer and editor in the fitness industry. [Click here](https://bryankrahn.com/) to check out the site.
+Redesigned the website of Bryan Krahn, a writer and editor in the fitness industry.
+
+<BadgeList>
+  <Badge outline>Content Strategy</Badge>
+  <Badge outline>Conversion Optimization</Badge>
+  <Badge outline>Copywriting</Badge>
+  <Badge outline>Design</Badge>
+  <Badge outline>Development</Badge>
+  <Badge outline>Email Marketing</Badge>
+  
+</BadgeList>
 
 <ImageWide>
 <PortfolioImage>
@@ -130,12 +191,19 @@ Redesigned the website of Bryan Krahn, a writer and editor in the fitness indust
 <!-- Physiqonomics -->
 <ProjectContainer>
 <ProjectHead
-  badge="Fall 2017"
   project="Physiqonomics"
-  subhead="Design, Development, and Copy"
+  subhead="Fall 2017"
+  link="https://physiqonomics.com/"
 />
 
-Redesigned the website of Adam Ali, a writer in the fitness industry. [Click here](https://physiqonomics.com/) to check out the site.
+Redesigned the website of Adam Ali, a writer in the fitness industry.
+
+<BadgeList>
+  <Badge outline>Conversion Optimization</Badge>
+  <Badge outline>Copywriting</Badge>
+  <Badge outline>Design</Badge>
+  <Badge outline>Development</Badge>
+</BadgeList>
 
 <ImageWide>
 <PortfolioImage>

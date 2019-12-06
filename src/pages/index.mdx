@@ -4,12 +4,10 @@ date: 2019-10-04T00:25:54-07:00
 type: "page"
 ---
 
-import { Body } from "../components/layout"
-import SEO from "../components/seo"
-import styled from '@emotion/styled'
+import SEO from "../components/SEO"
+import styled from "@emotion/styled"
 import MainAvatar from "../images/sly-avatar-main.svg"
-import { Styled } from 'theme-ui'
-
+import { Styled } from "theme-ui"
 
 export const HomeCenteredArea = styled.div`
   margin-left: auto;
@@ -18,21 +16,23 @@ export const HomeCenteredArea = styled.div`
   vertical-align: middle;
   padding-top: ${props => props.theme.tachyons.spacing.s4};
   padding-bottom: ${props => props.theme.tachyons.spacing.s4};
-`;
+`
 
 <SEO />
 
 <Body>
 
 <HomeCenteredArea>
-<HomeHeadline>
-<span style="font-weight: 200">Hi, I'm</span> Slyvon Blanco</HomeHeadline>
-<SubHeadline>
-(You can just call me Sly)
-</SubHeadline>
+  <Styled.h1 style="margin-bottom: 10px">
+    <span style="font-weight: 200">Hi, I'm</span> Slyvon Blanco
+  </Styled.h1>
+  <Styled.h4 style="margin-top: 0; font-weight: 200">
+    (Most people just call me Sly)
+  </Styled.h4>
 </HomeCenteredArea>
 
-I'm an independent strategist, consultant, copywriter, and [web designer](https://slyvon.com/work). I have a thing for simplifying complex ideas using words and design. Someone once called me a "Systems Jedi", so I guess I'm that, too.
+
+I'm an independent strategist, consultant, copywriter, and [web designer](/work). I have a thing for simplifying complex ideas using words and design. Someone once called me a "Systems Jedi", so I guess I'm that, too.
 
 In my free time, I make things like make [SimplifiedFitness.io](https://simplifiedfitness.io/). I also try to [write stuff](/blog) every now and then.
 

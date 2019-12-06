@@ -1,4 +1,6 @@
 const offwhite = "#f5f5f5"
+const darkmodeBG = "#222"
+const darkmodeBodyText = "#ddd"
 const darkest = "#222"
 const catchyred = "#ed213a"
 const bodytext = "#333"
@@ -20,26 +22,24 @@ export default {
 				muted: gray9,
 				gray: gray7,
 				darken: darkest,
-				authorboxBG: "white",
-				authorboxBorder: "#ddd",
-				yellowboxBG: washedyellow,
-				yellowboxBorder: "#ddd280",
+				EndOfPostBoxBG: "white",
+				EndOfPostBoxBorder: "#ddd",
+				infoBoxBorder: "#ddd280",
 				codeBG: "#ddd",
 				border: "#e6e6e6",
 			},
 			dark: {
-				background: darkest,
-				text: offwhite,
+				background: darkmodeBG,
+				text: darkmodeBodyText,
 				primary: offwhite,
 				secondary: catchyred,
 				accent: "#333",
 				muted: gray9,
 				gray: gray7,
 				darken: "white",
-				authorboxBG: "#333",
-				authorboxBorder: darklink,
-				yellowboxBG: "#333",
-				yellowboxBorder: darklink,
+				EndOfPostBoxBG: "#333",
+				EndOfPostBoxBorder: darklink,
+				infoBoxBorder: "rgba(0,0,0,0.05) 0 0 0 1px",
 				codeBG: gray7,
 				border: darklink,
 			},
@@ -67,10 +67,23 @@ export default {
 			marginTop: 0,
 		},
 	},
+	InfoBoxes: {
+		yellow: {
+			color: "text",
+			background: "washedyellow"
+		},
+		red: {
+			color: "text",
+			background: "#000"
+		}
+	},
 	styles: {
 		p: {
 			fontSize: 2,
 			lineHeight: "body",
+		},
+		img: {
+			WebkitUserDrag: "none"
 		},
 		a: {
 			fontWeight: "500",
@@ -107,7 +120,7 @@ export default {
 		},
 		h4: {
 			fontSize: 3,
-			color: "#555",
+			color: "gray",
 			fontWeight: "heading",
 			lineHeight: "heading",
 			letterSpacing: "heading",
