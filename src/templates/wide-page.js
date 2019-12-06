@@ -17,7 +17,7 @@ export const pageQuery = graphql`
 	}
 `
 
-export default function WidePageTemplate({ data: { mdx } }) {
+export default function PageTemplate({ data: { mdx } }) {
 	return (
 		<Layout>
 			<SEO title={mdx.frontmatter.title} />
