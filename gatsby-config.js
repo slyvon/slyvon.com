@@ -1,10 +1,26 @@
 module.exports = {
 	siteMetadata: {
 		title: `Slyvon Blanco`,
-		description: `Independent strategist, consultant, and designer.`,
+		description: `My home on the internet.`,
 		author: `Slyvon Blanco`,
 	},
 	plugins: [
+		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-catch-links`,
+		`gatsby-plugin-sass`,
+		'gatsby-plugin-theme-ui',
+		{
+			resolve: "gatsby-plugin-netlify-cache",
+			options: {
+				cachePublic: false
+			}
+		},
+		{
+			resolve: `gatsby-plugin-emotion`,
+			options: {
+				// Accepts all options defined by `babel-plugin-emotion` plugin.
+			},
+		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -24,33 +40,10 @@ module.exports = {
 			options: {
 				useMozJpeg: false,
 				stripMetadata: true,
-				defaultQuality: 85,
+				defaultQuality: 75,
 			},
 		},
 		`gatsby-transformer-sharp`,
-		`gatsby-plugin-react-helmet`,
-		`gatsby-plugin-catch-links`,
-		`gatsby-plugin-sass`,
-		'gatsby-plugin-theme-ui',
-		{
-      resolve: 'gatsby-theme-style-guide',
-      options: {
-        // sets path for generated page
-        basePath: '/styles',
-      }
-    },
-		{
-			resolve: "gatsby-plugin-netlify-cache",
-			options: {
-				cachePublic: false
-			}
-		},
-		{
-			resolve: `gatsby-plugin-emotion`,
-			options: {
-				// Accepts all options defined by `babel-plugin-emotion` plugin.
-			},
-		},
 		{
 			resolve: `gatsby-plugin-mdx`,
 			options: {
@@ -61,10 +54,9 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-images`,
 						options: {
-							maxWidth: 675,
+							maxWidth: 700,
 							linkImagesToOriginal: false,
 							showCaptions: true,
-							quality: 95,
 						},
 					},
 				],
@@ -81,10 +73,9 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-images`,
 						options: {
-							maxWidth: 675,
+							maxWidth: 700,
 							linkImagesToOriginal: false,
 							showCaptions: true,
-							quality: 95,
 						},
 					},
 					{
@@ -101,12 +92,6 @@ module.exports = {
 							], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
 						},
 					},
-					{
-            resolve: 'gatsby-remark-instagram-embed',
-            options: {
-            },
-					},
-					`gatsby-remark-responsive-iframe`,
 				],
 			},
 		},
@@ -114,7 +99,7 @@ module.exports = {
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: `Slyvon Blanco`,
-				short_name: `Slyvon.com`,
+				short_name: `@slyvon`,
 				start_url: `/`,
 				background_color: `#f5f5f5`,
 				theme_color: `#663399`,
@@ -122,6 +107,8 @@ module.exports = {
 				icon: `src/images/favicon.png`, // This path is relative to the root of the site.
 			},
 		},
+		// this (optional) plugin enables Progressive Web App + Offline functionality
+		// To learn more, visit: https://gatsby.dev/offline
 		`gatsby-plugin-offline`,
 	],
 }

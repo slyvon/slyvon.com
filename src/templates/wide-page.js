@@ -5,7 +5,6 @@ import Body from "../components/Body"
 
 import Layout from "../components/layout"
 import SEO from "../components/SEO"
-import { Styled } from 'theme-ui'
 
 export const pageQuery = graphql`
 	query SingleWidePageQuery($slug: String) {

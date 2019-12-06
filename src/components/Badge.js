@@ -1,6 +1,10 @@
 import styled from "@emotion/styled"
+import theme from "../gatsby-plugin-theme-ui/index"
 
-const Badge = styled.span`
+const regular = theme.colors.modes.light.gray;
+const outline = theme.colors.modes.light.background;
+
+const Badge = styled.li`
     box-sizing: border-box;
     max-width: fit-content;
     display: inline-block;
@@ -9,11 +13,12 @@ const Badge = styled.span`
     font-weight: 600;
     white-space: nowrap;
     padding: 3px 5px;
-    color: white;
-    background-color: #333;
+    color: ${props => props.outline ? regular : outline};
+    background-color: ${props => props.outline ? outline : regular};
     border-radius: 2px;
+    border: 1px solid ${props => props.outline ? regular : outline};
     margin-bottom: 5px;
-    margin-top: 20px;
+    margin-right: .25em;
     text-transform: uppercase;
 `
 export default Badge
