@@ -120,7 +120,7 @@ const DarkModeIcon = styled.button`
 	position: relative;
 	border-radius: 5px;
 	display: inline-block;
-	transition: background-color 0.3s ease;
+	transition: background-color 0.4s ease;
 	background-color: ${props => props.theme.colors.background};
 	border: ${props => props.theme.colors.background};
 	vertical-align: middle;
