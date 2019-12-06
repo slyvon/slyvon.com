@@ -120,7 +120,7 @@ export default {
 		},
 		h4: {
 			fontSize: 3,
-			color: "gray",
+			color: "#555",
 			fontWeight: "heading",
 			lineHeight: "heading",
 			letterSpacing: "heading",
