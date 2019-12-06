@@ -44,7 +44,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.4.1",
-    "theme-ui": "^0.2.49"
+    "theme-ui": "^0.2.49",
+    "typescript": "^3.7.3"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
