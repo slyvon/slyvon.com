@@ -13,7 +13,7 @@ import ImageWide from "./ImageWide"
 import InfoBox from "./InfoBox"
 import Button from "./Button"
 import theme from "../gatsby-plugin-theme-ui/index"
-import Header from "./Header"
+import Header from "./Nav"
 import Footer from "./Footer"
 import Container from "./Container"
 
