@@ -9,7 +9,7 @@ const Badge = styled.li`
     max-width: fit-content;
     display: inline-block;
     vertical-align: baseline;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
     white-space: nowrap;
     padding: 3px 5px;
@@ -19,6 +19,5 @@ const Badge = styled.li`
     border: 1px solid ${props => props.outline ? regular : outline};
     margin-bottom: 5px;
     margin-right: .25em;
-    text-transform: uppercase;
 `
 export default Badge

@@ -37,14 +37,14 @@ export const ProjectContainer = styled.div`
 
 export const ProjectHead = props => (
   <div>
-    <Styled.h4 style="font-size: 14px; margin-top: 0; margin-bottom: 0px; font-weight: 300;">
+    <Styled.h4 style="font-size: 14px; margin-top: 0; margin-bottom: 0px; font-weight: 300; color: #777;">
         {props.subhead}
     </Styled.h4>
     <Styled.h2 style="margin-top: 5px; margin-bottom: 5px; display: inline-flex;">
         {props.project}
     </Styled.h2>
       <LinkIcon href={props.link} target="_blank" rel="noopener">
-      <span><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M5.982 1.042h2.232L3.898 5.358l.745.744 4.316-4.316v2.233h1.04V.52A.508.508 0 0 0 9.48 0H5.982v1.042zM9 9H1V1h2.978V0H.51A.51.51 0 0 0 0 .51v8.98c0 .282.228.51.51.51h8.98a.51.51 0 0 0 .51-.51V6.026H9V9z" fill="#999"></path></svg></span>
+      <span><svg width="15" height="15" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path fill="#555" d="M 25.980469 2.9902344 A 1.0001 1.0001 0 0 0 25.869141 3 L 20 3 A 1.0001 1.0001 0 1 0 20 5 L 23.585938 5 L 13.292969 15.292969 A 1.0001 1.0001 0 1 0 14.707031 16.707031 L 25 6.4140625 L 25 10 A 1.0001 1.0001 0 1 0 27 10 L 27 4.1269531 A 1.0001 1.0001 0 0 0 25.980469 2.9902344 z M 6 7 C 4.9069372 7 4 7.9069372 4 9 L 4 24 C 4 25.093063 4.9069372 26 6 26 L 21 26 C 22.093063 26 23 25.093063 23 24 L 23 14 L 23 11.421875 L 21 13.421875 L 21 16 L 21 24 L 6 24 L 6 9 L 14 9 L 16 9 L 16.578125 9 L 18.578125 7 L 16 7 L 14 7 L 6 7 z"></path></svg></span>
     </LinkIcon>
   </div>
 )
@@ -67,8 +67,10 @@ My most recent web design and development work. Brighter is a video production a
 
 <BadgeList>
   <Badge outline>Copywriting</Badge>
+  <Badge outline>CSS</Badge>
   <Badge outline>Design</Badge>
-  <Badge outline>Development</Badge>
+  <Badge outline>HTML</Badge>
+  <Badge outline>WordPress</Badge>
 </BadgeList>
 
 <ImageWide>
@@ -84,7 +86,7 @@ My most recent web design and development work. Brighter is a video production a
 <ProjectContainer>
 <ProjectHead
   project="SimplifiedFitness.io"
-  subhead="Est. 2011, Rebranded 2019"
+  subhead="Est. 2011, Rebranded Fall 2019"
   link="https://simplifiedfitness.io/"
 />
 
@@ -93,14 +95,48 @@ Originally Von Blanco Fitness, SimplifiedFitness.io is my fitness website that h
 <BadgeList>
   <Badge outline>Content Strategy</Badge>
   <Badge outline>Copywriting</Badge>
+  <Badge outline>CSS</Badge>
   <Badge outline>Design</Badge>
-  <Badge outline>Development</Badge>
+  <Badge outline>HTML</Badge>
+  <Badge outline>Page Speed Optimization</Badge>
+  <Badge outline>WordPress</Badge>
 </BadgeList>
 
 <ImageWide>
 <PortfolioImage>
 
 ![](../images/portfolio/simplifiedFitness-full.png)
+
+</PortfolioImage>
+</ImageWide>
+</ProjectContainer>
+
+<!-- Slyvon.com -->
+<ProjectContainer>
+<ProjectHead
+  project="Slyvon.com"
+  subhead="Fall 2019"
+/>
+
+Originally on WordPress, I took this site (my personal website) and rebuilt it from scratch using GatsbyJS. It's the most minimalist site I've ever designed, but surprisingly a lot of code was written under the hood.
+
+<BadgeList>
+  <Badge outline>CSS-In-JS</Badge>
+  <Badge outline>Design</Badge>
+  <Badge outline>GatsbyJS</Badge>
+  <Badge outline>GraphQL</Badge>
+  <Badge outline>HTML</Badge>
+  <Badge outline>JavaScript</Badge>
+  <Badge outline>Page Speed Optimization</Badge>
+  <Badge outline>React</Badge>
+  <Badge outline>Styled Components</Badge>
+  <Badge outline>Styled System</Badge>
+</BadgeList>
+
+<ImageWide>
+<PortfolioImage>
+
+![](../images/portfolio/slyvon-full.png)
 
 </PortfolioImage>
 </ImageWide>
@@ -120,8 +156,11 @@ Redesigned the website of JC Deen, a writer and editor in the fitness industry.
 <BadgeList>
   <Badge outline>Conversion Optimization</Badge>
   <Badge outline>Copywriting</Badge>
+  <Badge outline>CSS</Badge>
   <Badge outline>Design</Badge>
-  <Badge outline>Development</Badge>
+  <Badge outline>HTML</Badge>
+  <Badge outline>Page Speed Optimization</Badge>
+  <Badge outline>WordPress</Badge>
 </BadgeList>
 
 <ImageWide>
@@ -143,11 +182,11 @@ Redesigned the website of JC Deen, a writer and editor in the fitness industry.
 
 My web-design service sales page.
 
-<BadgeList>
-  <Badge outline>Copywriting</Badge>
+<Badge outline>Copywriting</Badge>
+  <Badge outline>CSS</Badge>
   <Badge outline>Design</Badge>
-  <Badge outline>Development</Badge>
-</BadgeList>
+  <Badge outline>HTML</Badge>
+  <Badge outline>WordPress</Badge>
 
 <ImageWide>
 <PortfolioImage>
@@ -173,10 +212,11 @@ Redesigned the website of Bryan Krahn, a writer and editor in the fitness indust
   <Badge outline>Content Strategy</Badge>
   <Badge outline>Conversion Optimization</Badge>
   <Badge outline>Copywriting</Badge>
+  <Badge outline>CSS</Badge>
   <Badge outline>Design</Badge>
-  <Badge outline>Development</Badge>
   <Badge outline>Email Marketing</Badge>
-  
+  <Badge outline>HTML</Badge>
+  <Badge outline>WordPress</Badge>
 </BadgeList>
 
 <ImageWide>
@@ -200,9 +240,10 @@ Redesigned the website of Adam Ali, a writer in the fitness industry.
 
 <BadgeList>
   <Badge outline>Conversion Optimization</Badge>
-  <Badge outline>Copywriting</Badge>
+  <Badge outline>CSS</Badge>
   <Badge outline>Design</Badge>
-  <Badge outline>Development</Badge>
+  <Badge outline>HTML</Badge>
+  <Badge outline>WordPress</Badge>
 </BadgeList>
 
 <ImageWide>
