@@ -18,7 +18,7 @@ const Header = () => {
 		<NavBar>
 			<Brand>
 				<LinkLogo to="/">
-					<Thin>slyvon</Thin>blanco
+					<Thin>SLYVON</Thin>BLANCO
 				</LinkLogo>
 			</Brand>
 			<Menu>
@@ -61,7 +61,7 @@ const NavBar = styled.header`
 	box-sizing: border-box;
 	display: table;
 	width: 100%;
-	max-width: ${props => props.theme.tachyons.maxwidth.mw9};
+	max-width: ${props => props.theme.tachyons.maxwidth.mw8};
 	margin-right: auto;
 	margin-left: auto;
 	padding-top: ${props => props.theme.tachyons.spacing.s3};
@@ -83,9 +83,9 @@ const Brand = styled.div`
 // `
 
 const LinkLogo = styled(Link)`
-	color: ${props => props.theme.colors.text};
-	font-size: ${props => props.theme.tachyons.size.f5};
-	font-weight: ${props => props.theme.tachyons.weight.fw8};
+	color: ${props => props.theme.colors.primary};
+	font-size: ${props => props.theme.tachyons.size.f6};
+	font-weight: ${props => props.theme.tachyons.weight.fw9};
 	letter-spacing: ${props => props.theme.tachyons.letterspacing.tight};
 	text-decoration: none;
 `
@@ -98,8 +98,6 @@ const Menu = styled.div`
 	width: 80%;
 	display: table-cell;
 	text-align: right;
-	text-transform: uppercase;
-	font-size: ${props => props.theme.tachyons.size.f6};
 	vertical-align: middle;
 `
 
@@ -108,7 +106,8 @@ const LinkNavItem = styled(Link)`
 	text-decoration: none;
 	color: ${props => props.theme.colors.gray};
 	display: inline-block;
-	vertical-align: middle;
+	text-transform: uppercase;
+	font-size: 13px;
 
 	:hover {
 		color: ${props => props.theme.colors.primary};
@@ -117,6 +116,8 @@ const LinkNavItem = styled(Link)`
 // Dark mode sun/moon
 const DarkModeIcon = styled.button`
 	opacity: 0.5;
+	margin-bottom: 2px;
+	padding-left: 0;
 	cursor: pointer;
 	outline: transparent;
 	position: relative;

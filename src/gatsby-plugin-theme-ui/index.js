@@ -81,6 +81,9 @@ export default {
 		p: {
 			fontSize: 2,
 			lineHeight: "body",
+				strong: {
+					color: "darken",
+				},
 		},
 		img: {
 			WebkitUserDrag: "none"
@@ -120,7 +123,7 @@ export default {
 		},
 		h4: {
 			fontSize: 3,
-			color: "#555",
+			color: "darken",
 			fontWeight: "heading",
 			lineHeight: "heading",
 			letterSpacing: "heading",
