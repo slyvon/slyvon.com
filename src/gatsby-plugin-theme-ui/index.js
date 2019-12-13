@@ -144,7 +144,7 @@ export default {
 			overflowWrap: "break-word",
 		},
 		li: {
-			marginBottom: "1.3em",
+			marginBottom: "1.1em",
 			marginTop: 0,
 			fontSize: "18px",
 			lineHeight: "body",

@@ -2,8 +2,6 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-
-import Avatar from "../images/sly-avatar-main.svg"
 import { useColorMode } from "theme-ui"
 
 // Output
@@ -20,7 +18,7 @@ const Header = () => {
 		<NavBar>
 			<Brand>
 				<LinkLogo to="/">
-					<HomeAvatarImg src={Avatar} />
+					<Thin>slyvon</Thin>blanco
 				</LinkLogo>
 			</Brand>
 			<Menu>
@@ -66,8 +64,8 @@ const NavBar = styled.header`
 	max-width: ${props => props.theme.tachyons.maxwidth.mw9};
 	margin-right: auto;
 	margin-left: auto;
-	padding-top: ${props => props.theme.tachyons.spacing.s2};
-	padding-bottom: ${props => props.theme.tachyons.spacing.s2};
+	padding-top: ${props => props.theme.tachyons.spacing.s3};
+	padding-bottom: ${props => props.theme.tachyons.spacing.s3};
 	margin-bottom: 4rem;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
@@ -76,20 +74,24 @@ const NavBar = styled.header`
 
 const Brand = styled.div`
 	display: table-cell;
-	font-size: ${props => props.theme.tachyons.size.f4};
-	font-weight: ${props => props.theme.tachyons.weight.fw7};
-	letter-spacing: ${props => props.theme.tachyons.letterspacing.tight};
 	vertical-align: middle;
 `
 
-const HomeAvatarImg = styled.img`
-	width: 40px;
-	height: auto;
-`
+// const HomeAvatarImg = styled.img`
+// 	width: 40px;
+// 	height: auto;
+// `
 
 const LinkLogo = styled(Link)`
-	color: rgba(0, 0, 0, 0.8);
+	color: ${props => props.theme.colors.text};
+	font-size: ${props => props.theme.tachyons.size.f4};
+	font-weight: ${props => props.theme.tachyons.weight.fw7};
+	letter-spacing: ${props => props.theme.tachyons.letterspacing.tight};
 	text-decoration: none;
+`
+
+const Thin = styled.span`
+	font-weight: 300;
 `
 
 const Menu = styled.div`
