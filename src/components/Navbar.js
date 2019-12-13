@@ -84,7 +84,7 @@ const Brand = styled.div`
 
 const LinkLogo = styled(Link)`
 	color: ${props => props.theme.colors.text};
-	font-size: ${props => props.theme.tachyons.size.f4};
+	font-size: ${props => props.theme.tachyons.size.f5};
 	font-weight: ${props => props.theme.tachyons.weight.fw8};
 	letter-spacing: ${props => props.theme.tachyons.letterspacing.tight};
 	text-decoration: none;
