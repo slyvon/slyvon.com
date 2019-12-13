@@ -6,6 +6,7 @@ import { Global, css } from "@emotion/core"
 
 // Components and styles
 import { ThemeProvider } from "theme-ui"
+import Avatar from "./Avatar"
 import Badge from "./Badge"
 import Body from "./Body"
 import EndOfPostBox from "./EndOfPostBox"
@@ -39,6 +40,7 @@ const Layout = ({ children }) => {
 			<ThemeProvider
 				theme={theme}
 				components={{ 
+					Avatar,
 					Badge, 
 					Body, 
 					Button,

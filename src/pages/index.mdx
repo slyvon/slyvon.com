@@ -7,7 +7,6 @@ type: "page"
 import SEO from "../components/SEO"
 import styled from '@emotion/styled'
 import { Styled } from 'theme-ui'
-import Sly from "../images/profile2.png"
 
 
 
@@ -29,21 +28,14 @@ export const HomeHeadline = styled.h1`
       line-height: 1;
 `
 
-export const SlyAvatar = styled.img`
-  padding: 0;
-  max-width: 100px;
-  border-radius: 50%;
-  margin-bottom: 0;
-`
+
 
 <SEO />
 
 <Body>
 
 <HomeCenteredArea>
-  
-<SlyAvatar src={Sly} />
-
+<Avatar />  
   <HomeHeadline>
     Hi, I'm Sly<span style="color: #ed213a;">.</span>
   </HomeHeadline>
