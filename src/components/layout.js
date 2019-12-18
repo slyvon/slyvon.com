@@ -17,6 +17,7 @@ import theme from "../gatsby-plugin-theme-ui/index"
 import Header from "./Navbar"
 import Footer from "./Footer"
 import Container from "./Container"
+import Subheadline from "./Subheadline"
 
 
 // Adjustable width inner container
@@ -46,7 +47,8 @@ const Layout = ({ children }) => {
 					Button,
 					EndOfPostBox, 
 					ImageWide, 
-					InfoBox, 
+					InfoBox,
+					Subheadline,
 					 }}
 			>
 				<Global

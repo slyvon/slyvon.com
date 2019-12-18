@@ -24,7 +24,7 @@ const Header = () => {
 			<Menu>
 				<LinkNavItem to="/blog">Blog</LinkNavItem>
 				<LinkNavItem to="/tools">Tools</LinkNavItem>
-				<LinkNavItem to="/work">Work</LinkNavItem>
+				<LinkNavItem to="/about">About</LinkNavItem>
 
 				<DarkModeIcon
 					isDark={isDark}
@@ -106,7 +106,6 @@ const LinkNavItem = styled(Link)`
 	text-decoration: none;
 	color: ${props => props.theme.colors.gray};
 	display: inline-block;
-	text-transform: uppercase;
 	font-size: 13px;
 
 	:hover {
