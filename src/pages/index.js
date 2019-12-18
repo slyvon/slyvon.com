@@ -9,7 +9,6 @@ import { ThemeProvider } from "theme-ui"
 import Container from "../components/Container"
 import theme from "../gatsby-plugin-theme-ui/index"
 import { Link } from "gatsby"
-import Subheadline from "../components/Subheadline"
 
 const HomeCenteredArea = styled.div`
  display: flex;
@@ -18,22 +17,36 @@ const HomeCenteredArea = styled.div`
   min-height: 100vh;
 `
 
-const Pink = styled.span`
-      color: #ed213a;
+const Muted = styled.span`
+      color: ${props => props.theme.colors.muted};
 `
 
 const HomeHeadline = styled.h1`
       color: ${props => props.theme.colors.darken};
       font-weight: ${props => props.theme.fontWeights.fattest};
-      font-size: 55px;
+      font-size: ${props => props.theme.tachyons.size.f1};
       letter-spacing: ${props => props.theme.letterSpacings.heading};
       margin-bottom: 30px;
       margin-top: 25px;
       line-height: 1;
-        @media all and (max-width: 800px) {
-          font-size: ${props => props.theme.tachyons.size.f1};
+      @media all and (max-width: 800px) {
+          font-size: 49px;
 		}
 `  
+
+const Byline = styled.p`
+    font-weight: 300;
+    line-height: 1.3;
+    color: ${props => props.theme.colors.text};
+    font-size: ${props => props.theme.tachyons.size.f4};
+    margin-bottom: 30px;
+    margin-top: 0;
+    @media all and (max-width: 800px) {
+          font-size: 20px;
+		}
+`
+
+
 const Home = () => (
 <Container>
   <SEO />
@@ -58,11 +71,11 @@ const Home = () => (
 <HomeCenteredArea>
 <Avatar /> 
   <HomeHeadline>
-    Hi, I'm Sly Blanco<Pink>.</Pink>
+   Hello, I'm Slyvon Blanco.
   </HomeHeadline>
-  <Subheadline>
-    I'm an independent web consultant, strategist, designer, copywriter, and chicken wings addict. Welcome to my home on the internet.
-  </Subheadline>
+  <Byline>
+    I'm an independent web consultant, strategist, and designer who has a thing for simplifying complex ideas. <Muted>Welcome to my corner of the internet.</Muted>
+  </Byline>
   <Link to="/about"><Button>Enter ➝</Button></Link>
 </HomeCenteredArea>
 </Body>
