@@ -1,6 +1,4 @@
 import styled from "@emotion/styled"
-import theme from "../gatsby-plugin-theme-ui/index"
-
 
 const Subheadline = styled.h3`
     font-weight: 200;
