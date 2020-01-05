@@ -21,6 +21,10 @@ const Muted = styled.span`
       color: ${props => props.theme.colors.muted};
 `
 
+const Pink = styled.span`
+      color: ${props => props.theme.colors.secondary};
+`
+
 const HomeHeadline = styled.h1`
       color: ${props => props.theme.colors.darken};
       font-weight: ${props => props.theme.fontWeights.fattest};
@@ -37,6 +41,7 @@ const HomeHeadline = styled.h1`
 const Byline = styled.p`
     font-weight: 300;
     line-height: 1.3;
+    letter-spacing: ${props => props.theme.letterSpacings.heading};
     color: ${props => props.theme.colors.text};
     font-size: ${props => props.theme.tachyons.size.f4};
     margin-bottom: 30px;
@@ -71,12 +76,12 @@ const Home = () => (
 <HomeCenteredArea>
 <Avatar /> 
   <HomeHeadline>
-   Hello, I'm Slyvon Blanco.
+   Hi, I'm Slyvon Blanco<Pink>.</Pink>
   </HomeHeadline>
   <Byline>
     I'm an independent web consultant, strategist, and designer who has a thing for simplifying complex ideas. <Muted>Welcome to my corner of the internet.</Muted>
   </Byline>
-  <Link to="/about"><Button>Enter ➝</Button></Link>
+  <Link to="/about"><Button>About Sly ➝</Button></Link>
 </HomeCenteredArea>
 </Body>
 			</ThemeProvider>

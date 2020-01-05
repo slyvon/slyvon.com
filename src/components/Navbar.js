@@ -18,7 +18,7 @@ const Header = () => {
 		<NavBar>
 			<Brand>
 				<LinkLogo to="/">
-					<Thin>SLYVON</Thin>BLANCO
+					SLYVON<Thin>BLANCO</Thin>
 				</LinkLogo>
 			</Brand>
 			<Menu>
