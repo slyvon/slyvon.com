@@ -22,9 +22,9 @@ const Header = () => {
 				</LinkLogo>
 			</Brand>
 			<Menu>
+			<LinkNavItem to="/about">About</LinkNavItem>
 				<LinkNavItem to="/blog">Blog</LinkNavItem>
 				<LinkNavItem to="/tools">Tools</LinkNavItem>
-				<LinkNavItem to="/about">About</LinkNavItem>
 
 				<DarkModeIcon
 					isDark={isDark}
