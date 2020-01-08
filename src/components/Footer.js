@@ -2,23 +2,23 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 
-const FooterArea = styled.footer`
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 2rem;
+const FooterArea = styled.div`
+	margin: 0 auto;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
-	text-align: center;
+	max-width: ${props => (props.wide ? "64rem" : "555px")};
+	display: table;
+	width: 100%;
 `
 
 const FooterText = styled.footer`
-	display: block;
-	color: ${props => props.theme.colors.gray};
+	color: ${props => props.theme.colors.muted};
 	font-size: ${props => props.theme.tachyons.size.f6};
+	text-align: left;
 `
 
 const FooterLink = styled(Link)`
-	color: ${props => props.theme.colors.gray};
+	color: ${props => props.theme.colors.muted};
 	text-decoration: none;
 `
 

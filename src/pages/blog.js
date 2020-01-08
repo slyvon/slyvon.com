@@ -42,7 +42,7 @@ const BlogPage = () => {
 		<Layout>
 			<SEO title="Blog" />
 				<Body>
-				<Styled.h1>Things I've Written</Styled.h1>
+				<Styled.h1>Posts I've Written</Styled.h1>
 				{data.allMdx.edges.map(edge => {
 					return (
 						<BlogList>

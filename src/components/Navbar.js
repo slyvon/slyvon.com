@@ -16,15 +16,13 @@ const Header = () => {
 
 	return (
 		<NavBar>
-			<Brand>
-				<LinkLogo to="/">
-					SLYVON<Thin>BLANCO</Thin>
-				</LinkLogo>
-			</Brand>
 			<Menu>
+			<LinkLogo to="/">
+					slyvon<Accent>.</Accent>
+				</LinkLogo>
 			<LinkNavItem to="/about">About</LinkNavItem>
-				<LinkNavItem to="/blog">Blog</LinkNavItem>
-				<LinkNavItem to="/tools">Tools</LinkNavItem>
+				<LinkNavItem to="/blog">Words</LinkNavItem>
+				<LinkNavItem to="/things">Things</LinkNavItem>
 
 				<DarkModeIcon
 					isDark={isDark}
@@ -54,7 +52,6 @@ export default Header
 // Styling
 const NavBar = styled.header`
 	position: sticky;
-	background: ${props => props.theme.colors.background};
 	transition: all 0.4s ease;
 	top: 0;
 	z-index: 100;
@@ -64,18 +61,27 @@ const NavBar = styled.header`
 	max-width: ${props => props.theme.tachyons.maxwidth.mw9};
 	margin-right: auto;
 	margin-left: auto;
-	padding-top: ${props => props.theme.tachyons.spacing.s3};
-	padding-bottom: ${props => props.theme.tachyons.spacing.s3};
+	padding-top: ${props => props.theme.tachyons.spacing.s4};
+	padding-bottom: ${props => props.theme.tachyons.spacing.s4};
 	margin-bottom: 4rem;
+	@media all and (max-width: 800px) {
+		background: ${props => props.theme.colors.background};
+		padding-top: ${props => props.theme.tachyons.spacing.s3};
+	padding-bottom: ${props => props.theme.tachyons.spacing.s3};
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 	border-color: ${props => props.theme.colors.border};
+		}
 `
 
-const Brand = styled.div`
-	display: table-cell;
-	vertical-align: middle;
+const Accent = styled.span`
+      color: ${props => props.theme.colors.secondary};
 `
+
+// const Brand = styled.div`
+// 	display: table-cell;
+// 	vertical-align: middle;
+// `
 
 // const HomeAvatarImg = styled.img`
 // 	width: 40px;
@@ -83,15 +89,12 @@ const Brand = styled.div`
 // `
 
 const LinkLogo = styled(Link)`
+margin-right: 1rem;
 	color: ${props => props.theme.colors.primary};
 	font-size: ${props => props.theme.tachyons.size.f6};
 	font-weight: ${props => props.theme.tachyons.weight.fw9};
-	letter-spacing: ${props => props.theme.tachyons.letterspacing.tight};
 	text-decoration: none;
-`
-
-const Thin = styled.span`
-	font-weight: 300;
+	text-transform: lowercase;
 `
 
 const Menu = styled.div`
@@ -104,10 +107,10 @@ const Menu = styled.div`
 const LinkNavItem = styled(Link)`
 	margin-right: 1rem;
 	text-decoration: none;
+	text-transform: lowercase;
 	color: ${props => props.theme.colors.gray};
 	display: inline-block;
-	font-size: 13px;
-
+	font-size: 14px;
 	:hover {
 		color: ${props => props.theme.colors.primary};
 	}

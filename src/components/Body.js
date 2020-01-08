@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 const Body = styled.div`
 	margin: 0 auto;
 	max-width: ${props => (props.wide ? "64rem" : "555px")};
-	min-height: 100vh;
+	min-height: 90vh;
 	display: flex;
 	flex-direction: column;
 
