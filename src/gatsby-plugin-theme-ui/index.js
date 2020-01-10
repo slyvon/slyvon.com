@@ -1,4 +1,4 @@
-const offwhite = "#f5f5f5"
+const offwhite = "#f7f7f7"
 const darkmodeBG = "#222"
 const darkmodeBodyText = "#ddd"
 const darkest = "#222"

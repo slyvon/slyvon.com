@@ -20,7 +20,7 @@ const Header = () => {
 			<LinkLogo to="/">
 					slyvon<Accent>.</Accent>
 				</LinkLogo>
-			<LinkNavItem to="/about">About</LinkNavItem>
+			<LinkNavItem to="/about">who?</LinkNavItem>
 				<LinkNavItem to="/blog">Words</LinkNavItem>
 				<LinkNavItem to="/things">Things</LinkNavItem>
 

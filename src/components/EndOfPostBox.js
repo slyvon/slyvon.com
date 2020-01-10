@@ -9,9 +9,9 @@ const Box = styled.div`
 	margin-bottom: ${props => props.theme.tachyons.spacing.s4};
 	padding: ${props => props.theme.tachyons.spacing.s4};
 	border-radius: ${props => props.theme.tachyons.borderRadius.br2};
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px, 
-							/** Second box shadow is the border */
-							rgba(0,0,0,0.05) 0 0 0 1px ;
+	box-shadow: rgba(0,0,0,0.05) 0 0 0 1px ;
+							/** Above box shadow is a border */
+							
 `
 
 const Content = styled.p`
