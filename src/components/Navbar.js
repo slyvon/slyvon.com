@@ -64,7 +64,7 @@ const NavBar = styled.header`
 	padding-top: ${props => props.theme.tachyons.spacing.s4};
 	padding-bottom: ${props => props.theme.tachyons.spacing.s4};
 	margin-bottom: 4rem;
-	@media all and (max-width: 800px) {
+	@media all and (max-width: 1024px) {
 		background: ${props => props.theme.colors.background};
 		padding-top: ${props => props.theme.tachyons.spacing.s3};
 	padding-bottom: ${props => props.theme.tachyons.spacing.s3};
