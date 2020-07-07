@@ -27,7 +27,7 @@ const Footer = () => {
 		
 		<FooterArea>
 			<FooterText>
-				© {new Date().getFullYear()} — Handcrafted by{" "}
+				© {new Date().getFullYear()} — Made by{" "}
 				<FooterLink to="/">Sly</FooterLink> using GatsbyJS
 			</FooterText>
 		</FooterArea>
