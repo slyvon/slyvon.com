@@ -30,10 +30,11 @@ const work = await Promise.all(
 
 ---
 
-<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+<PageLayout title="Slyvon Blanco | My home on the internet" description={HOME.DESCRIPTION}>
   <Container>
+    
     <h1 class="animate font-bold text-black dark:text-white">
-      Hi, I'm Slyvon Blanco! <span class="text-xl">👋🏻</span> 
+      Hi, I'm Sly! <span class="text-xl">👋🏻</span> 
     </h1>
     <div class="space-y-16">
       <section>
@@ -59,7 +60,7 @@ const work = await Promise.all(
             View all 
           </Link>
         </div>
-        <ul class="flex flex-col gap-4">
+        <ul class="flex flex-col gap-3">
           {blog.map(post => (
             <li>
               <ArrowCard entry={post} />

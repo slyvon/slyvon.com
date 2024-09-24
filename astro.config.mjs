@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://slyvon-com.pages.dev",
+  site: "https://slyvon.netlify.app",
   integrations: [mdx(), sitemap(), tailwind()],
 });
