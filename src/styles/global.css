@@ -33,6 +33,10 @@ main {
   @apply flex-1 py-32;
 }
 
+h1 {
+  font-size: xx-large;
+}
+
 footer {
   @apply py-5 text-sm;
 }
