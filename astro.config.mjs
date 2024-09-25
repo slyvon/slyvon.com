@@ -6,9 +6,9 @@ import tailwind from "@astrojs/tailwind";
 import { targetBlank } from "./src/targetBlank";
 
 export default defineConfig({
-  site: "https://slyvon.netlify.app",
+  site: "https://slyvon.com",
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
-    rehypePlugins: [[targetBlank, { domain: 'slyvon.netlify.app' }]],
+    rehypePlugins: [[targetBlank, { domain: 'slyvon.com' }]],
   },
 });
