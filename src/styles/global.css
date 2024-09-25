@@ -33,10 +33,6 @@ main {
   @apply flex-1 py-32;
 }
 
-h1 {
-  font-size: xx-large;
-}
-
 footer {
   @apply py-5 text-sm;
 }
@@ -74,4 +70,16 @@ html #back-to-top {
 
 html.scrolled #back-to-top {
   @apply opacity-100 pointer-events-auto;
+}
+
+
+/* Custom additions */
+
+article img {
+  border: 1px solid #e6e6e6;
+  border-radius: .5rem;
+}
+
+h1 {
+  font-size: xx-large;
 }

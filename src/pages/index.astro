@@ -4,7 +4,6 @@ import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
-import { dateRange } from "@lib/utils";
 import { SITE, HOME, SOCIALS } from "@consts";
 
 const blog = (await getCollection("blog"))
@@ -12,36 +11,20 @@ const blog = (await getCollection("blog"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
 
-const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0,SITE.NUM_PROJECTS_ON_HOMEPAGE);
-
-const allwork = (await getCollection("work"))
-  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
-  .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
-
-const work = await Promise.all(
-  allwork.map(async (item) => {
-    const { Content } = await item.render();
-    return { ...item, Content };
-  })
-);
-
 ---
 
 <PageLayout title="Slyvon Blanco | My home on the internet" description={HOME.DESCRIPTION}>
   <Container>
 <section>
-    <div class="flex items-center mb-8 py-2">
+    <div class="flex items-center mb-6 py-2">
       <img
-        class="w-24 mr-8 animate"
-        src="./sly-memoji.svg"
+        class="w-24 mr-6 animate"
+        src="/sly-memoji.svg"
       />
-      <div>
+      <div class="mr-6">
         <h1 class="animate font-bold text-black dark:text-white">Hi, I'm Sly</h1>
         <p class="animate text-lg text-gray-700">
-          I'm an independent web developer, cybersecurity afficionado, and chicken wings addict
+          I'm a front-end web developer and cybersecurity enthusiast
         </p>
       </div>
     </div>
@@ -51,7 +34,7 @@ const work = await Promise.all(
       <section>
         <article class="space-y-4">
           <p class="animate">
-            I dabble in all things tech and wear many hats, but I spend most of my time <Link href="https://aestheticpixels.io/" aria-label="AestheticPixels.io" external>making websites</Link> for clients or working on side projects like <Link href="https://simplifiedfitness.io/" aria-label="SimplifiedFitness.io" external>SimplifiedFitness.io</Link>. IRL, you can probably find me exploring a new city, at a gym lifting heavy things, or at home rewatching a Christopher Nolan movie.
+            I wear many hats, but I spend most of my time <Link href="https://aestheticpixels.io/" aria-label="AestheticPixels.io" external>making websites</Link> for clients or working on projects like <Link href="https://simplifiedfitness.io/" aria-label="SimplifiedFitness.io" external>SimplifiedFitness.io</Link>. IRL, you can probably find me exploring a new city, at a gym lifting heavy things, or at home rewatching a Christopher Nolan movie.
           </p>
          
           <p class="animate">
