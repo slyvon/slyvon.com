@@ -20,6 +20,7 @@ const blog = (await getCollection("blog"))
       <img
         class="w-24 mr-5"
         src="/sly-memoji.svg"
+        alt="Sly"
       />
       <div>
         <h1 class="font-bold text-black dark:text-white">Hi, I'm Sly</h1>
@@ -45,9 +46,9 @@ const blog = (await getCollection("blog"))
 
       <section class="space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
+          <h4 class="font-semibold text-black dark:text-white">
             Latest Posts
-          </h5>
+          </h4>
           <Link href="/blog">
             View all 
           </Link>
@@ -63,9 +64,9 @@ const blog = (await getCollection("blog"))
 
 
       <section class="space-y-4">
-        <h5 class="font-semibold text-black dark:text-white">
+        <h4 class="font-semibold text-black dark:text-white">
           Let's Connect
-        </h5>
+        </h4>
         <article>
           <p>
             If you want to get in touch with me about something or just to say hi,
