@@ -16,14 +16,14 @@ const blog = (await getCollection("blog"))
 <PageLayout title="Slyvon Blanco | My home on the internet" description={HOME.DESCRIPTION}>
   <Container>
 <section>
-    <div class="flex items-center mb-6">
+    <div class="flex items-center mb-6 animate">
       <img
-        class="w-24 mr-5 animate"
+        class="w-24 mr-5"
         src="/sly-memoji.svg"
       />
       <div>
-        <h1 class="animate font-bold text-black dark:text-white">Hi, I'm Sly!</h1>
-        <p class="animate leading-6 text-lg text-zinc-600 dark:text-zinc-500">
+        <h1 class="font-bold text-black dark:text-white">Hi, I'm Sly</h1>
+        <p class="leading-6 text-lg text-zinc-600 dark:text-zinc-500">
           I'm a web consultant and cybersecurity enthusiast
         </p>
       </div>
@@ -33,17 +33,17 @@ const blog = (await getCollection("blog"))
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
-          <p class="animate">
+          <p>
             I wear many hats, but I spend most of my time <Link href="https://aestheticpixels.io/" aria-label="AestheticPixels.io" external>making websites</Link> for clients or working on projects like <Link href="https://simplifiedfitness.io/" aria-label="SimplifiedFitness.io" external>SimplifiedFitness.io</Link>. IRL, you can probably find me exploring a new city, at a gym lifting heavy things, or at home rewatching a Christopher Nolan movie.
           </p>
          
-          <p class="animate">
+          <p>
             Welcome to my little corner of the internet.
           </p>
         </article>
       </section>
 
-      <section class="animate space-y-6">
+      <section class="space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
             Latest Posts
@@ -62,7 +62,7 @@ const blog = (await getCollection("blog"))
       </section>
 
 
-      <section class="animate space-y-4">
+      <section class="space-y-4">
         <h5 class="font-semibold text-black dark:text-white">
           Let's Connect
         </h5>
