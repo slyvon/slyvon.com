@@ -8,6 +8,9 @@ import { targetBlank } from "./src/targetBlank";
 export default defineConfig({
   site: "https://slyvon.com",
   integrations: [mdx(), sitemap(), tailwind()],
+  redirects: {
+    "/blog/[...slug]": "/[...slug]"
+  },
   markdown: {
     rehypePlugins: [[targetBlank, { domain: 'slyvon.com' }]],
   },
